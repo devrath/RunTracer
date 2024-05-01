@@ -11,3 +11,12 @@
 🏃‍♂️ 𝚃𝚛𝚊𝚌𝚔𝚒𝚗𝚐 𝚊𝚙𝚙𝚕𝚒𝚌𝚊𝚝𝚒𝚘𝚗 𝚞𝚜𝚎𝚍 𝚝𝚘 𝚝𝚛𝚊𝚌𝚔 𝚝𝚑𝚎 𝚞𝚜𝚎𝚛 𝚓𝚘𝚞𝚛𝚗𝚎𝚢
 
 </div>
+
+
+
+
+
+
+<p align="center">
+<a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>
+</p>
