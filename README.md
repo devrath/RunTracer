@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![google-maps-op](https://github.com/devrath/RunTracer/assets/1456191/52db07a0-9abf-4726-a55d-877aeb7d5ee8)
+![cover drawio](https://github.com/devrath/RunTracer/assets/1456191/a75f15d9-845e-49b9-b87e-39d98697ffd3)
 
 </div>
 
