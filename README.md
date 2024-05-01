@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Google-Maps-updated-street-level-view-featured](https://github.com/devrath/RunTracer/assets/1456191/ba3e7da2-ea19-4bf1-9e90-8fb1d4da4a35)
+![google-maps-op](https://github.com/devrath/RunTracer/assets/1456191/52db07a0-9abf-4726-a55d-877aeb7d5ee8)
 
 </div>
 
