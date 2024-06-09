@@ -14,6 +14,12 @@
 
 
 
+# `Architecture`
+* [`Seperation of concerns`](https://github.com/devrath/RunTracer/wiki/Architecture:-Separation-of-concerns)
+* [`Advantages of multi-module`](https://github.com/devrath/RunTracer/wiki/Architecture:-Advantages-of-multi%E2%80%90module)
+
+
+
 
 
 
