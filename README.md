@@ -20,7 +20,8 @@
 * [`Disadvantages of multi-module`](https://github.com/devrath/RunTracer/wiki/Architecture:-Disadvantages-of-multi%E2%80%90module)
 * [`Which modularisation strategy to choose`](https://github.com/devrath/RunTracer/wiki/Architecture:-Which-modularisation-strategy-to-choose)
 
-
+# `Gradle Management`
+* [What is a Gradle](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-What-is-a-Gradle)
 
 
 
