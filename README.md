@@ -14,6 +14,16 @@
 
 
 
+# `Architecture`
+* [`Separation of concerns`](https://github.com/devrath/RunTracer/wiki/Architecture:-Separation-of-concerns)
+* [`Advantages of multi-module`](https://github.com/devrath/RunTracer/wiki/Architecture:-Advantages-of-multi%E2%80%90module)
+* [`Disadvantages of multi-module`](https://github.com/devrath/RunTracer/wiki/Architecture:-Disadvantages-of-multi%E2%80%90module)
+* [`Which modularisation strategy to choose`](https://github.com/devrath/RunTracer/wiki/Architecture:-Which-modularisation-strategy-to-choose)
+
+# `Gradle Management`
+* [`What is a Gradle`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-What-is-a-Gradle)
+* [`Gradle challenges in multi-module project`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Gradle-challenges-in-multi-module-project)
+
 
 
 
