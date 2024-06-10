@@ -22,6 +22,7 @@
 
 # `Gradle Management`
 * [What is a Gradle](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-What-is-a-Gradle)
+* [Gradle challenges in multi-module project](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Gradle-challenges-in-multi-module-project)
 
 
 
