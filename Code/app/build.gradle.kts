@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.mapsplatform.secrets.plugin)
 }
 
 android {
@@ -50,14 +51,34 @@ android {
 }
 
 dependencies {
+    // Foundation dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    // Compose
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    // Material
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.material.icons.extended)
+    // Coil
+    implementation(libs.coil.compose)
+    // Core
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    // Crypto
+    implementation(libs.androidx.security.crypto.ktx)
+    // Location
+    implementation(libs.google.android.gms.play.services.location)
+    // Splash screen
+    implementation(libs.androidx.core.splashscreen)
+    // Timber
+    implementation(libs.timber)
+    // Testing dependencies
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
