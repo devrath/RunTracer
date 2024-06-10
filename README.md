@@ -23,6 +23,8 @@
 # `Gradle Management`
 * [`What is a Gradle`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-What-is-a-Gradle)
 * [`Gradle challenges in multi-module project`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Gradle-challenges-in-multi-module-project)
+* [`Defining the module relations`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Defining-the-module-relations)
+* [`Setting up build logic module`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Setting-up-build-logic-module)
 
 
 
