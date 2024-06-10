@@ -51,6 +51,8 @@ android {
 }
 
 dependencies {
+    // Local modules
+    api(libs.core)
     // Foundation dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
