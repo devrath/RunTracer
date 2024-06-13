@@ -25,6 +25,7 @@
 * [`Gradle challenges in multi-module project`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Gradle-challenges-in-multi-module-project)
 * [`Defining the module relations`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Defining-the-module-relations)
 * [`Setting up build logic module`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Setting-up-build-logic-module)
+* [`Different types of Dependency handlers`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Different-types-of-Dependency-handlers)
 
 
 
