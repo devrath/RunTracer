@@ -28,6 +28,7 @@
 * [`Setting up build logic module`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Setting-up-build-logic-module)
 * `Adding convention Plugin`
   * [`Android Application Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Application-Convention-Plugin)
+  * [`BuildType Configuration Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-BuildType-Configuration-Plugin)
 
 
 
