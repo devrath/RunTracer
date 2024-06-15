@@ -26,7 +26,8 @@
 * [`Different types of Dependency handlers`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Different-types-of-Dependency-handlers)
 * [`Defining the module relations`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Defining-the-module-relations)
 * [`Setting up build logic module`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Setting-up-build-logic-module)
-* [`Adding convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Adding-convention-Plugin)
+* `Gradle Management`
+  * [`Adding convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Adding-convention-Plugin)
 
 
 
