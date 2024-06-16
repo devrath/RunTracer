@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.mapsplatform.secrets.plugin)
-    alias(libs.plugins.runtracer.android.application)
+   // alias(libs.plugins.runtracer.android.application)
+    alias(libs.plugins.runtracer.android.application.compose)
 }
 
 android {
