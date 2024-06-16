@@ -17,6 +17,7 @@ internal fun Project.configureAndroidCompose(
                 .findVersion("composeCompiler")
                 .get()
                 .toString()
+            //kotlinCompilerExtensionVersion = "1.5.1"
         }
 
         dependencies {
