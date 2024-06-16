@@ -29,6 +29,7 @@
 * `Adding convention Plugin`
   * [`Android Application Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Application-Convention-Plugin)
   * [`BuildType Configuration Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-BuildType-Configuration-Plugin)
+  * [`Android Application Compose Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Application-Compose-Convention-Plugin)
 
 
 
