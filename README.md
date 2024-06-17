@@ -35,7 +35,9 @@
   * [`Android Feature Ui Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Feature-Ui-Convention-Plugin)
   * [`Android Room Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Room-Convention-Plugin)
   * [`Jvm Library Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Jvm-Library-Convention-Plugin)
-
+# `Project Wide Utilities`
+* [`Creating error handling wrapper`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-Creating-error-handling-wrapper)
+* [`String resource management`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-String-resource-management)
 
 
 
