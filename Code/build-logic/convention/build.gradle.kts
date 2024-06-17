@@ -24,5 +24,9 @@ gradlePlugin {
             id = "runtracer.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
+        register("androidLibrary") {
+            id = "runtracer.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
     }
 }
