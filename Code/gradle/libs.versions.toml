@@ -119,3 +119,4 @@ mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.
 runtracer-android-application = { id = "runtracer.android.application", version = "unspecified" }
 runtracer-android-application-compose = { id = "runtracer.android.application.compose",version = "unspecified" }
 runtracer-android-library = { id = "runtracer.android.library", version = "unspecified" }
+runtracer-android-library-compose = { id = "runtracer.android.library.compose", version = "unspecified" }
