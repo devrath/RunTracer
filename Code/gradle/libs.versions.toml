@@ -123,6 +123,7 @@ runtracer-android-application-compose = { id = "runtracer.android.application.co
 runtracer-android-library = { id = "runtracer.android.library", version = "unspecified" }
 runtracer-android-library-compose = { id = "runtracer.android.library.compose", version = "unspecified" }
 runtracer-android-feature-ui = { id = "runtracer.android.feature.ui", version = "unspecified" }
+runtracer-android-room = { id = "runtracer.android.room", version = "unspecified" }
 
 
 [bundles]
