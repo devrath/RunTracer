@@ -31,6 +31,7 @@
   * [`BuildType Configuration Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-BuildType-Configuration-Plugin)
   * [`Android Application Compose Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Application-Compose-Convention-Plugin)
   * [`Android Library Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Library-Convention-Plugin)
+  * [`Android Library Compose Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Library-Compose-Convention-Plugin)
 
 
 
