@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.runtracer.android.application.compose)
+    alias(libs.plugins.runtracer.jvm.ktor)
     alias(libs.plugins.mapsplatform.secrets.plugin)
 }
 

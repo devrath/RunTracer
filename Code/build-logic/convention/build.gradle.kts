@@ -44,5 +44,9 @@ gradlePlugin {
             id = "runtracer.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
+        register("jvmKtor") {
+            id = "runtracer.jvm.ktor"
+            implementationClass = "JvmKtorConventionPlugin"
+        }
     }
 }
