@@ -38,6 +38,7 @@
 # `Project Wide Utilities`
 * [`Creating error handling wrapper`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-Creating-error-handling-wrapper)
 * [`String resource management`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-String-resource-management)
+* [`Observing one time events in Compose`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-Observing-one-time-events-in-Compose)
 
 
 
