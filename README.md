@@ -34,6 +34,7 @@
   * [`Android Library Compose Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Library-Compose-Convention-Plugin)
   * [`Android Feature Ui Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Feature-Ui-Convention-Plugin)
   * [`Android Room Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Room-Convention-Plugin)
+  * [`Jvm Library Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Jvm-Library-Convention-Plugin)
 
 
 
