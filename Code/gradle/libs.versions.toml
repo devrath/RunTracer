@@ -124,6 +124,7 @@ runtracer-android-library = { id = "runtracer.android.library", version = "unspe
 runtracer-android-library-compose = { id = "runtracer.android.library.compose", version = "unspecified" }
 runtracer-android-feature-ui = { id = "runtracer.android.feature.ui", version = "unspecified" }
 runtracer-android-room = { id = "runtracer.android.room", version = "unspecified" }
+runtracer-jvm-library = { id = "runtracer.jvm.library", version = "unspecified" }
 
 
 [bundles]

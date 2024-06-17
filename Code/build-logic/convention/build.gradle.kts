@@ -40,5 +40,9 @@ gradlePlugin {
             id = "runtracer.android.room"
             implementationClass = "AndroidRoomConventionPlugin"
         }
+        register("jvmLibrary") {
+            id = "runtracer.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
     }
 }
