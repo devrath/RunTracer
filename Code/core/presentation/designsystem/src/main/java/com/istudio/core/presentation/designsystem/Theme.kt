@@ -170,11 +170,12 @@ val DarkColorScheme = darkColorScheme(
     onSurfaceVariant = RuniqueGray
 )
 
-val dimen: CustomDimens
-    @Composable
-    @ReadOnlyComposable
-    get() = LocalCustomDimens.current
-
+object RunTracerTheme {
+    val dimen: CustomDimens
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalCustomDimens.current
+}
 
 /** *************************** Window Size Helper Classes *************************** **/
 @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)

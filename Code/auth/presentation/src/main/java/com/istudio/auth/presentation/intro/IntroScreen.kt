@@ -108,7 +108,7 @@ private fun RunTracerLogoVertical(modifier: Modifier = Modifier) {
             contentDescription = "Logo",
             tint = MaterialTheme.colorScheme.onBackground
         )
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(RunTracerTheme.dimen.introScreenDimen.logoBrandNameSpacing))
         RunTracerText(
             text = stringResource(id = R.string.run_tracer),
             fontSize = 24.sp,
