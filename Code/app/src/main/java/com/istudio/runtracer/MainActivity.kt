@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.istudio.auth.presentation.intro.IntroScreenRoot
 import com.istudio.core.presentation.designsystem.RunTracerTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,9 +21,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             RunTracerTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                    IntroScreenRoot(
+                        modifier = Modifier.padding(innerPadding),
+                        onSignInClick = {
+
+                        },
+                        onSignUpClick = {
+
+                        }
                     )
                 }
             }
@@ -31,10 +37,14 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
+fun CurrentScreen(modifier: Modifier = Modifier) {
+    IntroScreenRoot(
+        onSignInClick = {
+
+        },
+        onSignUpClick = {
+
+        }
     )
 }
 
@@ -42,6 +52,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     RunTracerTheme {
-        Greeting("Android")
+        CurrentScreen()
     }
 }
