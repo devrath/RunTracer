@@ -1,6 +1,8 @@
 package com.istudio.core.presentation.designsystem
 
 import android.app.Activity
+import android.content.Context
+import android.content.ContextWrapper
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -8,18 +10,26 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
+import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.WindowSizeClass
+import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.SideEffect
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.istudio.core.presentation.designsystem.dimen.CustomDimens
+import com.istudio.core.presentation.designsystem.dimen.LocalCustomDimens
 
 @Composable
 fun RunTracerTheme(
     // Flag to determine the dark/light theme
     isDarkTheme: Boolean = isSystemInDarkTheme(),
+    // Window Size class to determine the screen size
+    windowClassSize: WindowSizeClass? = loadLocalWindowSizeClass(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     // Parent most top level composable
@@ -71,11 +81,15 @@ fun RunTracerTheme(
         }
     }
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
+    val dimenByWindowSize = CustomDimens.createCustomDimenByWindowSize(windowClassSize)
+
+    CompositionLocalProvider(LocalCustomDimens provides dimenByWindowSize) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = Typography,
+            content = content
+        )
+    }
 }
 
 private val LightColors = lightColorScheme(
@@ -155,3 +169,28 @@ val DarkColorScheme = darkColorScheme(
     onSurface = RuniqueWhite,
     onSurfaceVariant = RuniqueGray
 )
+
+val dimen: CustomDimens
+    @Composable
+    @ReadOnlyComposable
+    get() = LocalCustomDimens.current
+
+
+/** *************************** Window Size Helper Classes *************************** **/
+@OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
+@Composable
+fun loadLocalWindowSizeClass(): WindowSizeClass? {
+    return LocalContext.current.findActivity()?.let { activity ->
+        calculateWindowSizeClass(activity)
+    }
+}
+
+private fun Context.findActivity(): Activity? {
+    var context = this
+    while (context is ContextWrapper) {
+        if (context is Activity) return context
+        context = context.baseContext
+    }
+    return null
+}
+/** *************************** Window Size Helper Classes *************************** **/

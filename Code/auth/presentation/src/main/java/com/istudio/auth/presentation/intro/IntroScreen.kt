@@ -6,8 +6,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -23,21 +23,22 @@ import com.istudio.core.presentation.designsystem.RunTracerTheme
 import com.istudio.core.presentation.designsystem.components.GradientBackground
 import com.istudio.core.presentation.designsystem.components.RunTracerActionButton
 import com.istudio.core.presentation.designsystem.components.RunTracerOutlinedActionButton
+import com.istudio.core.presentation.designsystem.components.RunTracerText
 
 
 @Composable
 fun IntroScreenRoot(
     modifier: Modifier = Modifier,
-    onSignUpClick : () -> Unit,
-    onSignInClick : () -> Unit
+    onSignUpClick: () -> Unit,
+    onSignInClick: () -> Unit
 ) {
     IntroScreen(
         onAction = { action ->
-           when(action){
-               IntroAction.OnSignInClick -> onSignInClick()
-               IntroAction.OnSignUpClick -> onSignUpClick()
-           }
-       }
+            when (action) {
+                IntroAction.OnSignInClick -> onSignInClick()
+                IntroAction.OnSignUpClick -> onSignUpClick()
+            }
+        }
     )
 }
 
@@ -49,10 +50,10 @@ fun IntroScreen(
 ) {
     GradientBackground {
         Box(
-           modifier = Modifier
-               .fillMaxWidth()
-               .weight(1f)
-               .align(alignment = Alignment.CenterHorizontally),
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+                .align(alignment = Alignment.CenterHorizontally),
             contentAlignment = Alignment.Center
         ) {
             RunTracerLogoVertical()
@@ -63,13 +64,13 @@ fun IntroScreen(
                 .padding(16.dp)
                 .padding(bottom = 48.dp)
         ) {
-            Text(
+            RunTracerText(
                 text = stringResource(id = R.string.welcome_to_runtracer),
-                color = MaterialTheme.colorScheme.onBackground,
-                fontSize = 20.sp
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onBackground
             )
             Spacer(modifier = Modifier.height(8.dp))
-            Text(
+            RunTracerText(
                 text = stringResource(id = R.string.runtracer_description),
                 style = MaterialTheme.typography.bodySmall
             )
@@ -108,7 +109,7 @@ private fun RunTracerLogoVertical(modifier: Modifier = Modifier) {
             tint = MaterialTheme.colorScheme.onBackground
         )
         Spacer(modifier = Modifier.height(12.dp))
-        Text(
+        RunTracerText(
             text = stringResource(id = R.string.run_tracer),
             fontSize = 24.sp,
             fontWeight = FontWeight.Medium,
@@ -122,7 +123,7 @@ private fun RunTracerLogoVertical(modifier: Modifier = Modifier) {
 @Composable
 private fun IntroScreenPreview() {
     RunTracerTheme {
-        IntroScreen (
+        IntroScreen(
             onAction = {}
         )
     }

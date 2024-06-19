@@ -23,9 +23,11 @@ internal fun Project.configureAndroidCompose(
         dependencies {
             val bom = libs.findLibrary("androidx.compose.bom").get()
             "implementation"(platform(bom))
+            "implementation"(platform(bom))
             "androidTestImplementation"(platform(bom))
             "debugImplementation"(platform(bom))
             "debugImplementation"(libs.findLibrary("androidx.ui.tooling.preview").get())
+            "implementation"(libs.findLibrary("androidx.compose.material3.windowSizeClass").get())
         }
     }
 }
