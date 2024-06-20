@@ -24,6 +24,7 @@ import com.istudio.core.presentation.designsystem.components.GradientBackground
 import com.istudio.core.presentation.designsystem.components.RunTracerActionButton
 import com.istudio.core.presentation.designsystem.components.RunTracerOutlinedActionButton
 import com.istudio.core.presentation.designsystem.components.RunTracerText
+import com.istudio.core.presentation.designsystem.preview.WindowSizeClassPreviews
 
 
 @Composable
@@ -119,7 +120,7 @@ private fun RunTracerLogoVertical(modifier: Modifier = Modifier) {
 }
 
 
-@Preview
+@WindowSizeClassPreviews
 @Composable
 private fun IntroScreenPreview() {
     RunTracerTheme {
