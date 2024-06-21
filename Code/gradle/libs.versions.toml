@@ -38,6 +38,8 @@ room = "2.6.1"
 timber = "5.0.1"
 androidTools = "31.2.2"
 material3WindowSizeClass = "1.2.1"
+detekt = "1.23.3"
+detekt-twitter-compose = "0.0.9"
 
 # Project versions
 projectApplicationId = "com.istudio.runtracer"
@@ -100,6 +102,9 @@ org-mongodb-bson = { module = "org.mongodb:bson", version.ref = "bson" }
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
 google-maps-android-utils-ktx = { module = "com.google.maps.android:maps-utils-ktx", version.ref = "mapsUtils"}
 annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+# Detekt
+detekt-twitter-compose = { module = "com.twitter.compose.rules:detekt", version.ref = "detekt-twitter-compose" }
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 
 # Gradle
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -118,7 +123,7 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 room = { id = "androidx.room", version.ref = "room" }
 androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agp" }
 mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsPlugin"}
-
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 
 runtracer-android-application = { id = "runtracer.android.application", version = "unspecified" }
 runtracer-android-application-compose = { id = "runtracer.android.application.compose",version = "unspecified" }
