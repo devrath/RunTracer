@@ -5,6 +5,7 @@ import com.istudio.convention.configureKotlinAndroid
 import com.istudio.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 
 class AndroidApplicationConventionPlugin : Plugin<Project> {
@@ -14,6 +15,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             pluginManager.run {
                 apply("com.android.application")
                 apply("org.jetbrains.kotlin.android")
+                apply("runtracer.quality.dateKt")
             }
             extensions.configure<ApplicationExtension> {
                 defaultConfig {

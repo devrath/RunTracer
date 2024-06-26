@@ -7,6 +7,7 @@ import com.istudio.convention.configureAndroidCompose
 import com.istudio.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
@@ -19,6 +20,7 @@ class AndroidRoomConventionPlugin : Plugin<Project> {
             pluginManager.run {
                 apply("androidx.room")
                 apply("com.google.devtools.ksp")
+                apply("runtracer.quality.dateKt")
             }
 
             extensions.configure<RoomExtension> {

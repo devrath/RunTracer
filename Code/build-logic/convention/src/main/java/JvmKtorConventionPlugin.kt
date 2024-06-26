@@ -1,6 +1,7 @@
 import com.istudio.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.dependencies
 
 class JvmKtorConventionPlugin: Plugin<Project> {
@@ -9,6 +10,7 @@ class JvmKtorConventionPlugin: Plugin<Project> {
         target.run {
             pluginManager.run {
                 apply("org.jetbrains.kotlin.plugin.serialization")
+                apply("runtracer.quality.dateKt")
             }
 
             dependencies {

@@ -5,6 +5,7 @@ import com.istudio.convention.ExtensionType
 import com.istudio.convention.configureAndroidCompose
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
@@ -16,6 +17,7 @@ class AndroidLibraryComposeConventionPlugin : Plugin<Project> {
         target.run {
             pluginManager.run {
                 apply("runtracer.android.library")
+                apply("runtracer.quality.dateKt")
             }
 
             val extension = extensions.getByType<LibraryExtension>()

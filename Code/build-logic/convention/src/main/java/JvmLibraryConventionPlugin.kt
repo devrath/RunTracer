@@ -2,6 +2,7 @@ import com.istudio.convention.configureKotlinJvm
 import com.istudio.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.apply
 
 class JvmLibraryConventionPlugin: Plugin<Project> {
 
@@ -9,6 +10,7 @@ class JvmLibraryConventionPlugin: Plugin<Project> {
         target.run {
             pluginManager.run {
                 apply("org.jetbrains.kotlin.jvm")
+                apply("runtracer.quality.dateKt")
             }
             configureKotlinJvm()
         }
