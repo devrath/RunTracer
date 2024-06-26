@@ -19,7 +19,6 @@ class AndroidRoomConventionPlugin : Plugin<Project> {
             pluginManager.run {
                 apply("androidx.room")
                 apply("com.google.devtools.ksp")
-                apply("io.gitlab.arturbosch.detekt")
             }
 
             extensions.configure<RoomExtension> {

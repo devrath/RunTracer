@@ -15,7 +15,6 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             pluginManager.run {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
-                apply("io.gitlab.arturbosch.detekt")
             }
 
             extensions.configure<LibraryExtension> {

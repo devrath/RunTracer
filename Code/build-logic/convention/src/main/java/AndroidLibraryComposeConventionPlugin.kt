@@ -16,7 +16,6 @@ class AndroidLibraryComposeConventionPlugin : Plugin<Project> {
         target.run {
             pluginManager.run {
                 apply("runtracer.android.library")
-                apply("io.gitlab.arturbosch.detekt")
             }
 
             val extension = extensions.getByType<LibraryExtension>()

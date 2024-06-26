@@ -14,7 +14,6 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             pluginManager.run {
                 apply("com.android.application")
                 apply("org.jetbrains.kotlin.android")
-                apply("io.gitlab.arturbosch.detekt")
             }
             extensions.configure<ApplicationExtension> {
                 defaultConfig {
