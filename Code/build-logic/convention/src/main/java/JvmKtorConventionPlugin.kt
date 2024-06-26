@@ -7,7 +7,10 @@ class JvmKtorConventionPlugin: Plugin<Project> {
 
     override fun apply(target: Project) {
         target.run {
-            pluginManager.apply("org.jetbrains.kotlin.plugin.serialization")
+            pluginManager.run {
+                apply("org.jetbrains.kotlin.plugin.serialization")
+                apply("io.gitlab.arturbosch.detekt")
+            }
 
             dependencies {
                 "implementation"(libs.findBundle("ktor").get())

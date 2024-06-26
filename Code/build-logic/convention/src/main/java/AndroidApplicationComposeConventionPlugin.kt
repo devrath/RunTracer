@@ -11,7 +11,6 @@ class AndroidApplicationComposeConventionPlugin: Plugin<Project> {
     override fun apply(target: Project) {
         target.run {
             pluginManager.apply("runtracer.android.application")
-
             val extension = extensions.getByType<ApplicationExtension>()
             configureAndroidCompose(extension)
         }

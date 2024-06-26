@@ -12,6 +12,7 @@ class AndroidFeatureUiConventionPlugin: Plugin<Project> {
         target.run {
             pluginManager.run {
                 apply("runtracer.android.library.compose")
+                apply("io.gitlab.arturbosch.detekt")
             }
 
             dependencies {

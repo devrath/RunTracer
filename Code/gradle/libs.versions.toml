@@ -133,6 +133,7 @@ runtracer-android-feature-ui = { id = "runtracer.android.feature.ui", version = 
 runtracer-android-room = { id = "runtracer.android.room", version = "unspecified" }
 runtracer-jvm-library = { id = "runtracer.jvm.library", version = "unspecified" }
 runtracer-jvm-ktor = { id = "runtracer.jvm.ktor", version = "unspecified" }
+runtracer-quality-datekt = { id = "runtracer.quality.dateKt", version = "unspecified" }
 
 [bundles]
 compose = [

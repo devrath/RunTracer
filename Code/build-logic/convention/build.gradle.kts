@@ -12,6 +12,7 @@ dependencies {
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.ksp.gradlePlugin)
     compileOnly(libs.room.gradlePlugin)
+    implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.23.3") // Use the appropriate version
 }
 
 gradlePlugin {
@@ -47,6 +48,10 @@ gradlePlugin {
         register("jvmKtor") {
             id = "runtracer.jvm.ktor"
             implementationClass = "JvmKtorConventionPlugin"
+        }
+        register("dateKt") {
+            id = "runtracer.quality.dateKt"
+            implementationClass = "DetektPlugin"
         }
     }
 }

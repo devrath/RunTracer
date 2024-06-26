@@ -6,7 +6,10 @@ class JvmLibraryConventionPlugin: Plugin<Project> {
 
     override fun apply(target: Project) {
         target.run {
-            pluginManager.apply("org.jetbrains.kotlin.jvm")
+            pluginManager.run {
+                apply("org.jetbrains.kotlin.jvm")
+                apply("io.gitlab.arturbosch.detekt")
+            }
             configureKotlinJvm()
         }
     }
