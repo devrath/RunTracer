@@ -7,7 +7,6 @@ import org.gradle.api.Project
 
 class DetektPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-
         project.run {
             applyPlugins()
             detektGradle {
@@ -18,7 +17,14 @@ class DetektPlugin : Plugin<Project> {
 
     private fun Project.applyPlugins() {
         pluginManager.apply {
-            apply(libs.findLibrary("detekt-gradlePlugin").get().get().group.toString())
+            apply(
+                libs
+                    .findLibrary("detekt-gradlePlugin")
+                    .get()
+                    .get()
+                    .group
+                    .toString(),
+            )
         }
     }
 }
