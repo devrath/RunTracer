@@ -9,7 +9,7 @@ import androidx.compose.ui.tooling.preview.Preview
  * The goal is to ensure a consistent and responsive UI across a wide range of configurations.
  */
 
-//<----------------------- Constants ---------------------------------------->
+// <----------------------- Constants ---------------------------------------->
 
 // Constants for background colors
 private const val LightBackgroundColor = 0xFFFFFFFF
@@ -30,9 +30,9 @@ private const val MediumDarkPreviewName = "Medium - Dark"
 private const val ExpandedPreviewName = "Expanded"
 private const val ExpandedDarkPreviewName = "Expanded - Dark"
 
-//<----------------------- Constants ---------------------------------------->
+// <----------------------- Constants ---------------------------------------->
 
-//<----------------------- Combined Previews ------------------------------->
+// <----------------------- Combined Previews ------------------------------->
 
 /**
  * Combines previews for compact, medium, and expanded device sizes.
@@ -50,9 +50,9 @@ annotation class WindowSizeClassPreviews
 @ThemePreviews
 @WindowSizeClassPreviews
 annotation class CompletePreviews
-//<----------------------- Combined Previews -------------------------------->
+// <----------------------- Combined Previews -------------------------------->
 
-//<----------------------- Theme Previews ----------------------------------->
+// <----------------------- Theme Previews ----------------------------------->
 
 /**
  * Defines previews for light and dark themes.
@@ -70,9 +70,9 @@ annotation class CompletePreviews
     uiMode = Configuration.UI_MODE_NIGHT_YES,
 )
 annotation class ThemePreviews
-//<----------------------- Theme Previews ----------------------------------->
+// <----------------------- Theme Previews ----------------------------------->
 
-//<----------------------- Device Compact Previews -------------------------->
+// <----------------------- Device Compact Previews -------------------------->
 
 /**
  * Defines previews for compact device sizes.
@@ -92,9 +92,9 @@ annotation class ThemePreviews
     device = CompactDeviceSpec
 )
 annotation class DeviceCompactPreviews
-//<----------------------- Device Compact Previews -------------------------->
+// <----------------------- Device Compact Previews -------------------------->
 
-//<----------------------- Device Medium Previews -------------------------->
+// <----------------------- Device Medium Previews -------------------------->
 
 /**
  * Defines previews for medium device sizes.
@@ -114,9 +114,9 @@ annotation class DeviceCompactPreviews
     device = MediumDeviceSpec
 )
 annotation class DeviceMediumPreviews
-//<----------------------- Device Medium Previews -------------------------->
+// <----------------------- Device Medium Previews -------------------------->
 
-//<----------------------- Device Expanded Previews ------------------------->
+// <----------------------- Device Expanded Previews ------------------------->
 
 /**
  * Defines previews for expanded device sizes.
@@ -136,4 +136,4 @@ annotation class DeviceMediumPreviews
     device = ExpandedDeviceSpec
 )
 annotation class DeviceExpandedPreviews
-//<----------------------- Device Expanded Previews ----------------------->
+// <----------------------- Device Expanded Previews ----------------------->

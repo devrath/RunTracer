@@ -46,7 +46,7 @@ fun RunTracerTheme(
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             // CONDITION-1:-> If the user is running on android-12 and above, We need to use dynamic colors.
-            if (isDarkTheme){
+            if (isDarkTheme) {
                 // CONDITION-3:-> If the user again is using dark theme, then we use dark colors.
                 dynamicDarkColorScheme(context)
             } else {
@@ -75,7 +75,8 @@ fun RunTracerTheme(
         SideEffect {
             /* the default code did the same cast here - might as well use our new variable! */
             currentWindow.statusBarColor = colorScheme.primary.toArgb()
-            /* accessing the insets controller to change appearance of the status bar, with 100% less deprecation warnings */
+            /* accessing the insets controller to change appearance of
+            the status bar, with 100% less deprecation warnings */
             WindowCompat.getInsetsController(currentWindow, view).isAppearanceLightStatusBars =
                 isDarkTheme
         }
@@ -123,7 +124,6 @@ private val LightColors = lightColorScheme(
     outlineVariant = md_theme_light_outlineVariant,
     scrim = md_theme_light_scrim,
 )
-
 
 private val DarkColors = darkColorScheme(
     primary = md_theme_dark_primary,

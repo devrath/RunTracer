@@ -18,6 +18,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.istudio.core.presentation.designsystem.RunTracerTheme
+import com.istudio.core.presentation.designsystem.components.UiConstants.GRADIENT_BLUR_VALUE
 
 @Composable
 fun GradientBackground(
@@ -53,8 +54,10 @@ fun GradientBackground(
                 .fillMaxSize()
                 .then(
                     if (isAtLeastAndroid12) {
-                        Modifier.blur(smallDimension / 3f)
-                    } else Modifier
+                        Modifier.blur(smallDimension / GRADIENT_BLUR_VALUE)
+                    } else {
+                        Modifier
+                    }
                 )
                 .background(
                     brush = Brush.radialGradient(
@@ -74,7 +77,7 @@ fun GradientBackground(
             modifier = Modifier
                 .fillMaxSize()
                 .then(
-                    if(hasToolbar) {
+                    if (hasToolbar) {
                         Modifier
                     } else {
                         Modifier.systemBarsPadding()
@@ -84,7 +87,6 @@ fun GradientBackground(
             content()
         }
     }
-
 }
 
 @Preview
@@ -93,8 +95,6 @@ private fun GradientBackgroundPreview() {
     RunTracerTheme {
         GradientBackground(
             modifier = Modifier.fillMaxSize()
-        ) {
-
-        }
+        ) { }
     }
 }

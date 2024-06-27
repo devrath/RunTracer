@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.istudio.core.presentation.designsystem.components.UiConstants.ROUNDED_CORNER_SHAPE
 
 @Composable
 fun RunTracerOutlinedActionButton(
@@ -37,7 +38,7 @@ fun RunTracerOutlinedActionButton(
             width = 0.5.dp,
             color = MaterialTheme.colorScheme.onBackground
         ),
-        shape = RoundedCornerShape(100f),
+        shape = RoundedCornerShape(ROUNDED_CORNER_SHAPE),
         modifier = modifier
             .height(IntrinsicSize.Min)
     ) {
@@ -56,7 +57,7 @@ fun RunTracerOutlinedActionButton(
             )
             RunTracerText(
                 text = text,
-                modifier = Modifier.alpha(if(isLoading) 0f else 1f),
+                modifier = Modifier.alpha(if (isLoading) 0f else 1f),
                 fontWeight = FontWeight.Medium
             )
         }

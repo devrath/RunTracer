@@ -1,8 +1,8 @@
 package com.istudio.core.data.networking
 
 import com.istudio.core.data.BuildConfig
-import com.istudio.core.domain.util.Result
 import com.istudio.core.domain.util.DataError
+import com.istudio.core.domain.util.Result
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.delete
@@ -15,22 +15,7 @@ import io.ktor.client.statement.HttpResponse
 import io.ktor.util.network.UnresolvedAddressException
 import kotlinx.coroutines.CancellationException
 import kotlinx.serialization.SerializationException
-
-object HttpStatus {
-    const val OK = 200
-    const val CREATED = 201
-    const val ACCEPTED = 202
-    const val NO_CONTENT = 204
-    const val UNAUTHORIZED = 401
-    const val REQUEST_TIMEOUT = 408
-    const val CONFLICT = 409
-    const val PAYLOAD_TOO_LARGE = 413
-    const val TOO_MANY_REQUESTS = 429
-    const val INTERNAL_SERVER_ERROR = 500
-    const val BAD_GATEWAY = 502
-    const val SERVICE_UNAVAILABLE = 503
-    const val GATEWAY_TIMEOUT = 504
-}
+import timber.log.Timber
 
 suspend inline fun <reified Response : Any> HttpClient.get(
     route: String,
@@ -73,21 +58,22 @@ suspend inline fun <reified Response : Any> HttpClient.delete(
 }
 
 suspend inline fun <reified T> safeCall(execute: () -> HttpResponse): Result<T, DataError.Network> {
-    val response = try {
-        execute()
+    val result: Result<T, DataError.Network> = try {
+        val response = execute()
+        responseToResult(response)
     } catch (e: UnresolvedAddressException) {
-        e.printStackTrace()
-        return Result.Error(DataError.Network.NO_INTERNET)
+        Timber.e(e, "Address not resolved while calling an API endpoint")
+        Result.Error(DataError.Network.NO_INTERNET)
     } catch (e: SerializationException) {
-        e.printStackTrace()
-        return Result.Error(DataError.Network.SERIALIZATION)
+        Timber.e(e, "Serialization error caused while calling an API endpoint")
+        Result.Error(DataError.Network.SERIALIZATION)
+    } catch (e: CancellationException) {
+        throw e
     } catch (e: Exception) {
-        if (e is CancellationException) throw e
-        e.printStackTrace()
-        return Result.Error(DataError.Network.UNKNOWN)
+        Timber.e(e, "Generic error caused while calling an API endpoint")
+        Result.Error(DataError.Network.UNKNOWN)
     }
-
-    return responseToResult(response)
+    return result
 }
 
 suspend inline fun <reified T> responseToResult(response: HttpResponse): Result<T, DataError.Network> {

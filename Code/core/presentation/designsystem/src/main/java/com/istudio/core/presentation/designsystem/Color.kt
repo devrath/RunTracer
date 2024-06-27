@@ -14,7 +14,6 @@ val RuniqueWhite = Color(0xFFFAFAFA)
 val RuniqueDarkRed = Color(0xFFBB3D3D)
 val RuniqueDarkRed5 = Color(0x0DBB3D3D)
 
-
 val md_theme_light_primary = Color(0xFFB90063)
 val md_theme_light_onPrimary = Color(0xFFFFFFFF)
 val md_theme_light_primaryContainer = Color(0xFFFFD9E2)
@@ -76,7 +75,6 @@ val md_theme_dark_shadow = Color(0xFF000000)
 val md_theme_dark_surfaceTint = Color(0xFFFFB1C8)
 val md_theme_dark_outlineVariant = Color(0xFF514347)
 val md_theme_dark_scrim = Color(0xFF000000)
-
 
 val seed = Color(0xFFD40072)
 val CustomColor1 = Color(0xFF66A638)

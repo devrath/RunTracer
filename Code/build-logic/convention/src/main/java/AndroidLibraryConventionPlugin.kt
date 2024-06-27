@@ -2,6 +2,7 @@ import com.android.build.api.dsl.LibraryExtension
 import com.istudio.convention.ExtensionType
 import com.istudio.convention.configureBuildTypes
 import com.istudio.convention.configureKotlinAndroid
+import com.istudio.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
@@ -35,6 +36,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
 
             dependencies {
                 "testImplementation"(kotlin("test"))
+                "implementation"(libs.findLibrary("timber").get())
             }
         }
     }

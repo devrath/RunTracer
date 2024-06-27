@@ -19,6 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.istudio.core.presentation.designsystem.RuniqueBlack
 import com.istudio.core.presentation.designsystem.RuniqueGray
+import com.istudio.core.presentation.designsystem.components.UiConstants.ROUNDED_CORNER_SHAPE
 
 @Composable
 fun RunTracerActionButton(
@@ -37,7 +38,7 @@ fun RunTracerActionButton(
             disabledContainerColor = RuniqueGray,
             disabledContentColor = RuniqueBlack
         ),
-        shape = RoundedCornerShape(100f),
+        shape = RoundedCornerShape(ROUNDED_CORNER_SHAPE),
         modifier = modifier
             .height(IntrinsicSize.Min)
     ) {
@@ -57,7 +58,7 @@ fun RunTracerActionButton(
             RunTracerText(
                 text = text,
                 modifier = Modifier
-                    .alpha(if(isLoading) 0f else 1f),
+                    .alpha(if (isLoading) 0f else 1f),
                 fontWeight = FontWeight.Medium
             )
         }
