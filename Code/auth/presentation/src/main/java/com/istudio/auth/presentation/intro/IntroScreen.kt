@@ -27,9 +27,11 @@ import com.istudio.core.presentation.designsystem.preview.WindowSizeClassPreview
 @Composable
 fun IntroScreenRoot(
     onSignUpClick: () -> Unit,
+    modifier: Modifier = Modifier,
     onSignInClick: () -> Unit,
 ) {
     IntroScreen(
+        modifier = modifier,
         onAction = { action ->
             when (action) {
                 IntroAction.OnSignInClick -> onSignInClick()
