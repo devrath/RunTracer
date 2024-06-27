@@ -16,6 +16,22 @@ import io.ktor.util.network.UnresolvedAddressException
 import kotlinx.coroutines.CancellationException
 import kotlinx.serialization.SerializationException
 
+object HttpStatus {
+    const val OK = 200
+    const val CREATED = 201
+    const val ACCEPTED = 202
+    const val NO_CONTENT = 204
+    const val UNAUTHORIZED = 401
+    const val REQUEST_TIMEOUT = 408
+    const val CONFLICT = 409
+    const val PAYLOAD_TOO_LARGE = 413
+    const val TOO_MANY_REQUESTS = 429
+    const val INTERNAL_SERVER_ERROR = 500
+    const val BAD_GATEWAY = 502
+    const val SERVICE_UNAVAILABLE = 503
+    const val GATEWAY_TIMEOUT = 504
+}
+
 suspend inline fun <reified Response : Any> HttpClient.get(
     route: String,
     queryParameters: Map<String, Any?> = mapOf()
@@ -59,14 +75,14 @@ suspend inline fun <reified Response : Any> HttpClient.delete(
 suspend inline fun <reified T> safeCall(execute: () -> HttpResponse): Result<T, DataError.Network> {
     val response = try {
         execute()
-    } catch(e: UnresolvedAddressException) {
+    } catch (e: UnresolvedAddressException) {
         e.printStackTrace()
         return Result.Error(DataError.Network.NO_INTERNET)
     } catch (e: SerializationException) {
         e.printStackTrace()
         return Result.Error(DataError.Network.SERIALIZATION)
-    } catch(e: Exception) {
-        if(e is CancellationException) throw e
+    } catch (e: Exception) {
+        if (e is CancellationException) throw e
         e.printStackTrace()
         return Result.Error(DataError.Network.UNKNOWN)
     }
@@ -75,14 +91,14 @@ suspend inline fun <reified T> safeCall(execute: () -> HttpResponse): Result<T, 
 }
 
 suspend inline fun <reified T> responseToResult(response: HttpResponse): Result<T, DataError.Network> {
-    return when(response.status.value) {
-        in 200..299 -> Result.Success(response.body<T>())
-        401 -> Result.Error(DataError.Network.UNAUTHORIZED)
-        408 -> Result.Error(DataError.Network.REQUEST_TIMEOUT)
-        409 -> Result.Error(DataError.Network.CONFLICT)
-        413 -> Result.Error(DataError.Network.PAYLOAD_TOO_LARGE)
-        429 -> Result.Error(DataError.Network.TOO_MANY_REQUESTS)
-        in 500..599 -> Result.Error(DataError.Network.SERVER_ERROR)
+    return when (response.status.value) {
+        in HttpStatus.OK..HttpStatus.NO_CONTENT -> Result.Success(response.body<T>())
+        HttpStatus.UNAUTHORIZED -> Result.Error(DataError.Network.UNAUTHORIZED)
+        HttpStatus.REQUEST_TIMEOUT -> Result.Error(DataError.Network.REQUEST_TIMEOUT)
+        HttpStatus.CONFLICT -> Result.Error(DataError.Network.CONFLICT)
+        HttpStatus.PAYLOAD_TOO_LARGE -> Result.Error(DataError.Network.PAYLOAD_TOO_LARGE)
+        HttpStatus.TOO_MANY_REQUESTS -> Result.Error(DataError.Network.TOO_MANY_REQUESTS)
+        in HttpStatus.INTERNAL_SERVER_ERROR..HttpStatus.GATEWAY_TIMEOUT -> Result.Error(DataError.Network.SERVER_ERROR)
         else -> Result.Error(DataError.Network.UNKNOWN)
     }
 }
