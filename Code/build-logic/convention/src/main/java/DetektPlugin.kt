@@ -17,7 +17,7 @@ class DetektPlugin : Plugin<Project> {
 
     private fun Project.applyPlugins() {
         pluginManager.apply {
-            apply(libs.findLibrary("detekt-formatting").get().get().group.toString())
+            apply(libs.findLibrary("detekt-gradlePlugin").get().get().group.toString())
         }
     }
 }

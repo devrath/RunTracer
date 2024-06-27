@@ -10,7 +10,6 @@ class JvmKtorConventionPlugin: Plugin<Project> {
         target.run {
             pluginManager.run {
                 apply("org.jetbrains.kotlin.plugin.serialization")
-                apply("runtracer.quality.dateKt")
             }
 
             dependencies {

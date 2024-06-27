@@ -13,7 +13,6 @@ class AndroidFeatureUiConventionPlugin: Plugin<Project> {
         target.run {
             pluginManager.run {
                 apply("runtracer.android.library.compose")
-                apply("runtracer.quality.dateKt")
             }
 
             dependencies {

@@ -20,7 +20,6 @@ class AndroidRoomConventionPlugin : Plugin<Project> {
             pluginManager.run {
                 apply("androidx.room")
                 apply("com.google.devtools.ksp")
-                apply("runtracer.quality.dateKt")
             }
 
             extensions.configure<RoomExtension> {

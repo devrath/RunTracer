@@ -104,7 +104,9 @@ google-maps-android-utils-ktx = { module = "com.google.maps.android:maps-utils-k
 annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 # Detekt
 detekt-twitter-compose = { module = "com.twitter.compose.rules:detekt", version.ref = "detekt-twitter-compose" }
-detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
+#detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
+detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
+detekt-gradlePlugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
 
 # Gradle
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }

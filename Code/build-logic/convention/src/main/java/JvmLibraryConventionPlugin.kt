@@ -10,7 +10,6 @@ class JvmLibraryConventionPlugin: Plugin<Project> {
         target.run {
             pluginManager.run {
                 apply("org.jetbrains.kotlin.jvm")
-                apply("runtracer.quality.dateKt")
             }
             configureKotlinJvm()
         }
