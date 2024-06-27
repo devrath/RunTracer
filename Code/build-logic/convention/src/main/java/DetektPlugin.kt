@@ -11,6 +11,8 @@ class DetektPlugin : Plugin<Project> {
             applyPlugins()
             detektGradle {
                 configureDetekt(this)
+                config.from(files("config/datekt/detekt.yml")) // Or use config.setFrom(files(...))
+
             }
         }
     }
