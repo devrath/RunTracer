@@ -288,7 +288,7 @@ exceptions:
     exceptionNames:
       - 'ArrayIndexOutOfBoundsException'
       - 'Error'
-      - 'Exception'
+      ## - 'Exception'
       - 'IllegalMonitorStateException'
       - 'IndexOutOfBoundsException'
       - 'NullPointerException'
@@ -299,7 +299,7 @@ exceptions:
     active: true
     exceptionNames:
       - 'Error'
-      - 'Exception'
+      ## - 'Exception'
       - 'RuntimeException'
       - 'Throwable'
 
@@ -741,7 +741,7 @@ style:
   UnusedPrivateMember:
     active: true
     allowedNames: ''
-    ignoreAnnotated: [ 'Preview' , 'ThemePreviews' ]
+    ignoreAnnotated: [ 'Preview' , 'ThemePreviews' , 'WindowSizeClassPreviews' ]
   UnusedPrivateProperty:
     active: true
     allowedNames: '_|ignored|expected|serialVersionUID'

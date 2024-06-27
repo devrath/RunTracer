@@ -42,6 +42,7 @@ internal fun Project.configureDetekt(extension: DetektExtension) =
         }
         dependencies {
             "detektPlugins"(libs.findLibrary("detekt-formatting").get())
+            // "detektPlugins"(libs.findLibrary("twitter-compose").get())
         }
     }
 
