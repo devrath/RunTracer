@@ -1,8 +1,6 @@
 package com.istudio.core.presentation.designsystem.preview
 
 import android.content.res.Configuration
-import androidx.compose.ui.tooling.preview.Preview
-
 /**
  * This file contains annotations for various UI previews. These annotations help in
  * testing the UI across different themes (light and dark) and device sizes (compact, medium, expanded).
@@ -58,6 +56,7 @@ annotation class CompletePreviews
  * Defines previews for light and dark themes.
  * Useful for ensuring the UI looks good in both light and dark modes.
  */
+@Suppress("UNRESOLVED_REFERENCE")
 @Preview(
     name = LightPreviewName,
     showBackground = true,
@@ -78,6 +77,7 @@ annotation class ThemePreviews
  * Defines previews for compact device sizes.
  * Ensures the UI is responsive and visually appealing on smaller screens (e.g., small phones).
  */
+@Suppress("UNRESOLVED_REFERENCE")
 @Preview(
     name = CompactPreviewName,
     showBackground = true,
@@ -100,6 +100,7 @@ annotation class DeviceCompactPreviews
  * Defines previews for medium device sizes.
  * Useful for testing the UI on medium-sized screens, such as tablets.
  */
+@Suppress("UNRESOLVED_REFERENCE")
 @Preview(
     name = MediumPreviewName,
     showBackground = true,
@@ -122,6 +123,7 @@ annotation class DeviceMediumPreviews
  * Defines previews for expanded device sizes.
  * Ensures the UI scales well on larger screens, such as large tablets and desktops.
  */
+@Suppress("UNRESOLVED_REFERENCE")
 @Preview(
     name = ExpandedPreviewName,
     showBackground = true,

@@ -2,6 +2,7 @@ plugins {
     `kotlin-dsl`
     id("java-library")
     alias(libs.plugins.jetbrains.kotlin.jvm)
+    //alias(libs.plugins.detekt)
 }
 
 group = "com.istudio.runtracer.buildlogic"
@@ -13,7 +14,7 @@ dependencies {
     compileOnly(libs.ksp.gradlePlugin)
     compileOnly(libs.room.gradlePlugin)
     compileOnly(libs.detekt.gradlePlugin)
-    compileOnly(libs.detekt.formatting)
+    compileOnly(libs.dokka.gradlePlugin)
 }
 
 gradlePlugin {
@@ -53,6 +54,10 @@ gradlePlugin {
         register("dateKt") {
             id = "runtracer.quality.dateKt"
             implementationClass = "DetektPlugin"
+        }
+        register("dokka") {
+            id = "runtracer.documentation.dokka"
+            implementationClass = "DokkaPlugin"
         }
     }
 }
