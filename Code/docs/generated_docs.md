@@ -1,6 +1,4 @@
-# Static Analysis
-
-This project leverages static analysis to ensure that the codebase meets certain standards that can be verified through automation. Two of these libraries are Detekt and Ktlint.
+# Documentation
 
 ## Dokka
 
