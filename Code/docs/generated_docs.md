@@ -1,0 +1,46 @@
+# Static Analysis
+
+This project leverages static analysis to ensure that the codebase meets certain standards that can be verified through automation. Two of these libraries are Detekt and Ktlint.
+
+## Dokka
+
+[Dokka](https://github.com/Kotlin/dokka) Dokka is an API documentation engine for Kotlin.
+
+To run the Dokka task in your Gradle project, you need to use the correct task name. The task name can vary based on how you have configured Dokka in your project. Here are the common tasks you might use:
+
+### Single-Module Project
+For a single-module project, the most commonly used Dokka task is `dokkaHtml`:
+
+```sh
+./gradlew dokkaHtml
+```
+
+### Multi-Module Project
+For a multi-module project, you would use `dokkaHtmlMultiModule`:
+
+```sh
+./gradlew dokkaHtmlMultiModule
+```
+
+### Other Dokka Tasks
+Depending on your Dokka configuration, there might be other tasks available, such as:
+- `dokkaGfm` for generating GitHub Flavored Markdown documentation.
+- `dokkaJekyll` for generating Jekyll-compatible documentation.
+
+### Finding Available Dokka Tasks
+To list all available tasks in your project, you can use the following command:
+
+```sh
+./gradlew tasks
+```
+
+This command will list all the tasks that Gradle recognizes, including those provided by the Dokka plugin. Look for tasks prefixed with `dokka` to find the exact task names you can use.
+
+### Example for Multi-Module Project
+Given your configuration, you should run:
+
+```sh
+./gradlew dokkaHtmlMultiModule
+```
+
+Make sure your project structure supports multi-module documentation and that you have correctly configured the Dokka plugin in your `build.gradle.kts` or `build.gradle` files.
