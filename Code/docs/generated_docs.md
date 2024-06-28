@@ -13,13 +13,6 @@ For a single-module project, the most commonly used Dokka task is `dokkaHtml`:
 ./gradlew dokkaHtml
 ```
 
-### Multi-Module Project
-For a multi-module project, you would use `dokkaHtmlMultiModule`:
-
-```sh
-./gradlew dokkaHtmlMultiModule
-```
-
 ### Other Dokka Tasks
 Depending on your Dokka configuration, there might be other tasks available, such as:
 - `dokkaGfm` for generating GitHub Flavored Markdown documentation.
