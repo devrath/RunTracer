@@ -1,3 +1,5 @@
+![png](https://github.com/devrath/RunTracer/assets/1456191/9ec164f0-b929-47a5-ac01-669963a12b2a)
+
 # Documentation
 
 ## Dokka
@@ -24,14 +26,3 @@ To list all available tasks in your project, you can use the following command:
 ```sh
 ./gradlew tasks
 ```
-
-This command will list all the tasks that Gradle recognizes, including those provided by the Dokka plugin. Look for tasks prefixed with `dokka` to find the exact task names you can use.
-
-### Example for Multi-Module Project
-Given your configuration, you should run:
-
-```sh
-./gradlew dokkaHtmlMultiModule
-```
-
-Make sure your project structure supports multi-module documentation and that you have correctly configured the Dokka plugin in your `build.gradle.kts` or `build.gradle` files.

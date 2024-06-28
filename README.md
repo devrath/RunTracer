@@ -46,6 +46,13 @@
 # `Code Quality`
 * [`DateKt`](https://github.com/devrath/RunTracer/wiki/Code-Quality:-Static-Code-Analysis-With-DeteKt)
 
+# `Performance`
+* [`LeakCanary - Memory leak detection library for Android.`](https://github.com/devrath/RunTracer/wiki/Performance:-LeakCanary)
+
+# `Code Documentation`
+* [`Dokka`](https://github.com/devrath/RunTracer/blob/main/Code/docs/generated_docs.md)
+
+
 <p align="center">
 <a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>
 </p>
