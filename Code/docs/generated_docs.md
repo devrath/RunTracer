@@ -26,14 +26,3 @@ To list all available tasks in your project, you can use the following command:
 ```sh
 ./gradlew tasks
 ```
-
-This command will list all the tasks that Gradle recognizes, including those provided by the Dokka plugin. Look for tasks prefixed with `dokka` to find the exact task names you can use.
-
-### Example for Multi-Module Project
-Given your configuration, you should run:
-
-```sh
-./gradlew dokkaHtmlMultiModule
-```
-
-Make sure your project structure supports multi-module documentation and that you have correctly configured the Dokka plugin in your `build.gradle.kts` or `build.gradle` files.
