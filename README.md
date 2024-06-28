@@ -47,7 +47,7 @@
 * [`DateKt`](https://github.com/devrath/RunTracer/wiki/Code-Quality:-Static-Code-Analysis-With-DeteKt)
 
 # `Performance`
-* [`LeakCanary`](https://github.com/devrath/RunTracer/wiki/Performance:-LeakCanary)
+* [`LeakCanary - Memory leak detection library for Android.`](https://github.com/devrath/RunTracer/wiki/Performance:-LeakCanary)
 
 # `Code Documentation`
 * [`Dokka`](https://github.com/devrath/RunTracer/blob/main/Code/docs/generated_docs.md)
