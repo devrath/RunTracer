@@ -10,15 +10,6 @@ class DokkaPlugin : Plugin<Project> {
         target.run {
             target.run {
                 pluginManager.apply("org.jetbrains.dokka")
-
-                tasks.withType<DokkaMultiModuleTask>().configureEach {
-                    outputDirectory.set(layout.projectDirectory.dir("website/static/kdoc"))
-                    moduleName.set("moduleName")
-                    cacheRoot.set(file("default"))
-                    suppressObviousFunctions.set(true)
-                    suppressInheritedMembers.set(true)
-                    offlineMode.set(true)
-                }
             }
         }
     }
