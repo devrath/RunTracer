@@ -67,6 +67,8 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
     // Timber
     implementation(libs.timber)
+    // leakcanary
+    implementation(libs.leakcanary.android)
     // Testing dependencies
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

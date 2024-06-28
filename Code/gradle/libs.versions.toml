@@ -41,6 +41,7 @@ material3WindowSizeClass = "1.2.1"
 detekt = "1.23.3"
 detekt-twitter-compose = "0.0.9"
 dokka = "1.9.20"
+leakcanary = "2.14"
 
 # Project versions
 projectApplicationId = "com.istudio.runtracer"
@@ -105,6 +106,7 @@ google-maps-android-utils-ktx = { module = "com.google.maps.android:maps-utils-k
 annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 detekt-twitter-compose = { module = "com.twitter.compose.rules:detekt", version.ref = "detekt-twitter-compose" }
 detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
+leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanary" }
 
 # Gradle
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
