@@ -47,7 +47,7 @@
 * [`DateKt`](https://github.com/devrath/RunTracer/wiki/Code-Quality:-Static-Code-Analysis-With-DeteKt)
 
 # `Code Documentation`
-* [`Dokka`]([https://github.com/devrath/RunTracer/wiki/Code-Quality:-Static-Code-Analysis-With-DeteKt](https://github.com/devrath/RunTracer/blob/main/Code/docs/generated_docs.md))
+* [`Dokka`](https://github.com/devrath/RunTracer/blob/main/Code/docs/generated_docs.md)
 
 
 <p align="center">
