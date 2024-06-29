@@ -62,6 +62,7 @@ fun RunTracerTextField(
     Column(
         modifier = modifier
     ) {
+        // <------------------------- FIRST-ROW ------------------------->
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -87,45 +88,53 @@ fun RunTracerTextField(
                 )
             }
         }
+        // <------------------------- FIRST-ROW ------------------------->
+
+        // <------------------------- SECOND-ROW ------------------------>
         Spacer(modifier = Modifier.height(4.dp))
+        // <------------------------- SECOND-ROW ------------------------>
+
+        // <------------------------- THIRD-ROW ------------------------>
+        val textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onBackground)
+        val keyboardOptions = KeyboardOptions(keyboardType = keyboardType)
+
+        val viewBackground = if (isFocused) {
+            // If focused -> Add a alpha value to surface color
+            MaterialTheme.colorScheme.primary.copy(alpha = 0.05f)
+        } else {
+            // Else -> Use the surface color
+            MaterialTheme.colorScheme.surface
+        }
+        val fieldPadding = 12.dp
+        val borderWidth = 1.dp
+        val borderShape = RoundedCornerShape(16.dp)
+        val borderColor = if (isFocused) {
+            // If focused -> Add a color
+            MaterialTheme.colorScheme.primary
+        } else {
+            // Else -> Remove the color
+            Color.Transparent
+        }
+
+        val fieldModifier =  Modifier
+            .clip(borderShape)
+            .background(viewBackground)
+            .border(width = borderWidth, color = borderColor, shape = borderShape)
+            .padding(fieldPadding)
+            .onFocusChanged {
+                isFocused = it.isFocused
+            }
+
         BasicTextField2(
             state = state,
-            textStyle = LocalTextStyle.current.copy(
-                color = MaterialTheme.colorScheme.onBackground
-            ),
-            keyboardOptions = KeyboardOptions(
-                keyboardType = keyboardType
-            ),
+            textStyle = textStyle,
+            keyboardOptions = keyboardOptions,
             lineLimits = TextFieldLineLimits.SingleLine,
             cursorBrush = SolidColor(MaterialTheme.colorScheme.onBackground),
-            modifier = Modifier
-                .clip(RoundedCornerShape(16.dp))
-                .background(
-                    if (isFocused) {
-                        MaterialTheme.colorScheme.primary.copy(
-                            alpha = 0.05f
-                        )
-                    } else {
-                        MaterialTheme.colorScheme.surface
-                    }
-                )
-                .border(
-                    width = 1.dp,
-                    color = if (isFocused) {
-                        MaterialTheme.colorScheme.primary
-                    } else {
-                        Color.Transparent
-                    },
-                    shape = RoundedCornerShape(16.dp)
-                )
-                .padding(12.dp)
-                .onFocusChanged {
-                    isFocused = it.isFocused
-                },
+            modifier = fieldModifier,
             decorator = { innerBox ->
                 Row(
-                    modifier = Modifier
-                        .fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     if (startIcon != null) {
@@ -164,6 +173,7 @@ fun RunTracerTextField(
                 }
             }
         )
+        // <------------------------- THIRD-ROW ------------------------>
     }
 }
 
