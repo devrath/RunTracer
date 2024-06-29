@@ -1,4 +1,7 @@
 site_name: RunTracer
+repo_url: https://github.com/devrath/RunTracer
+site_description: Documentation of the RunTracer project
+
 theme:
   name: material
   features:

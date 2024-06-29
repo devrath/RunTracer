@@ -1,0 +1,85 @@
+/* Header Styling */
+.md-header {
+  background-color: #2196F3; /* Material blue */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Styling */
+.md-nav {
+  background-color: #fafafa; /* Light gray */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.md-nav__link {
+  color: #333;
+}
+
+.md-nav__link:hover {
+  color: #2196F3; /* Material blue on hover */
+}
+
+/* Content Styling */
+.md-content {
+  max-width: 900px; /* Limit content width */
+  margin: 20px auto; /* Center content with some margin */
+  line-height: 1.6;
+}
+
+/* Footer Styling */
+.md-footer {
+  background-color: #2196F3; /* Material blue */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.md-footer a {
+  color: #fff; /* White links */
+  text-decoration: none;
+}
+
+.md-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2; /* Light gray */
+}
+
+/* Code Block Styling */
+pre {
+  background-color: #f5f5f5; /* Lighter gray */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Link Styling */
+a {
+  color: #2196F3; /* Material blue */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
