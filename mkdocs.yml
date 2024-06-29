@@ -55,14 +55,16 @@ nav:
       - What is a Gradle: gradle_management/what_is_gradle.md
       - Gradle Challenges: gradle_management/gradle_challenges_multi_module_project.md
 
-footer:
-  copyright: |
-    &copy; 2024 <a href="https://github.com/devrath" target="_blank" rel="noopener">Devrath</a>
+extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/devrath
-    - icon: fontawesome/brands/linkdin
+    - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/devrath-ad-01b59022/
+
+footer:
+  copyright: |
+    &copy; 2024 <a href="https://github.com/devrath" target="_blank" rel="noopener">Devrath</a>
 
 extra_css:
   - styles/custom.css
