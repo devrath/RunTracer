@@ -1,6 +1,4 @@
 There are 2 main challenges
-* [_Dependency management_](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Gradle-challenges-in-multi-module-project#dependency-management)
-* [_Config management_](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Gradle-challenges-in-multi-module-project#config-management)
 
 ## `Dependency Management`
 * Say now we have a dependency say `material-dependency` added app module and also the same dependency is mentioned in 20 other modules.
@@ -12,5 +10,5 @@ There are 2 main challenges
 * So it is easy to apply from a single place.
 * This would reduce the duplication of code across the modules and management becomes easier.
 
-## _**`SOLUTION`**_
+## _**`Solution`**_
 Have a single source of truth for dependency management so it is easy to manage the dependencies from one place.

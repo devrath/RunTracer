@@ -52,8 +52,9 @@ markdown_extensions:
 
 nav:
   - Gradle Management:
-      - What is a Gradle: gradle_management/what_is_gradle.md
-      - Gradle Challenges: gradle_management/gradle_challenges_multi_module_project.md
+      - What is a gradle: gradle_management/what_is_gradle.md
+      - Gradle challenges: gradle_management/gradle_challenges_multi_module_project.md
+      - Types of Dependency handlers: gradle_management/types_of_dependency_handlers.md
 
 extra_css:
   - styles/custom.css  # Optional: Path to your custom CSS file
