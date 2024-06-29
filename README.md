@@ -20,7 +20,7 @@
 * [`Disadvantages of multi-module`](https://github.com/devrath/RunTracer/wiki/Architecture:-Disadvantages-of-multi%E2%80%90module)
 * [`Which modularisation strategy to choose`](https://github.com/devrath/RunTracer/wiki/Architecture:-Which-modularisation-strategy-to-choose)
 
-# `Gradle Management` :atom:
+# `Gradle Management` 🛗
 * [`What is a Gradle`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-What-is-a-Gradle)
 * [`Gradle challenges in multi-module project`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Gradle-challenges-in-multi-module-project)
 * [`Different types of Dependency handlers`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Different-types-of-Dependency-handlers)
