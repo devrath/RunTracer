@@ -44,5 +44,10 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
+nav:
+  - Gradle Management:
+      - What is a Gradle: gradle_management/what_is_gradle.md
+      - Gradle Challenges: gradle_management/gradle_challenges_multi_module_project.md
+
 copyright: |
   &copy; 2024 <a href="https://github.com/devrath"  target="_blank" rel="noopener">Devrath</a>
