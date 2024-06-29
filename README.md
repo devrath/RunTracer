@@ -14,13 +14,13 @@
 
 
 
-# `Architecture`
+# `Architecture` 🧭
 * [`Separation of concerns`](https://github.com/devrath/RunTracer/wiki/Architecture:-Separation-of-concerns)
 * [`Advantages of multi-module`](https://github.com/devrath/RunTracer/wiki/Architecture:-Advantages-of-multi%E2%80%90module)
 * [`Disadvantages of multi-module`](https://github.com/devrath/RunTracer/wiki/Architecture:-Disadvantages-of-multi%E2%80%90module)
 * [`Which modularisation strategy to choose`](https://github.com/devrath/RunTracer/wiki/Architecture:-Which-modularisation-strategy-to-choose)
 
-# `Gradle Management`
+# `Gradle Management` :atom:
 * [`What is a Gradle`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-What-is-a-Gradle)
 * [`Gradle challenges in multi-module project`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Gradle-challenges-in-multi-module-project)
 * [`Different types of Dependency handlers`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Different-types-of-Dependency-handlers)
@@ -35,21 +35,23 @@
   * [`Android Feature Ui Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Feature-Ui-Convention-Plugin)
   * [`Android Room Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Android-Room-Convention-Plugin)
   * [`Jvm Library Convention Plugin`](https://github.com/devrath/RunTracer/wiki/Gradle-Management:-Jvm-Library-Convention-Plugin)
-# `Project Wide Utilities`
+    
+# `Project Wide Utilities` 🧰
 * [`Creating error handling wrapper`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-Creating-error-handling-wrapper)
 * [`String resource management`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-String-resource-management)
 * [`Observing one time events in Compose`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-Observing-one-time-events-in-Compose)
-# `Foundations`
+  
+# `Foundations` 🧱
 * [`Adaptability to different screen sizes`](https://github.com/devrath/ComposeAlchemy/wiki/WindowSize-Class-%E2%80%90-Adaptability-to-different-screen-sizes)
 * [`Displaying all previews of all screen sizes`](https://github.com/devrath/ComposeAlchemy/wiki/Compose-building-blocks:-Displaying-all-previews-of-all-screen-sizes)
 
-# `Code Quality`
+# `Code Quality` 🧪
 * [`DateKt`](https://github.com/devrath/RunTracer/wiki/Code-Quality:-Static-Code-Analysis-With-DeteKt)
 
-# `Performance`
+# `Performance` 🌡️
 * [`LeakCanary - Memory leak detection library for Android.`](https://github.com/devrath/RunTracer/wiki/Performance:-LeakCanary)
 
-# `Code Documentation`
+# `Code Documentation` 📰
 * [`Dokka`](https://github.com/devrath/RunTracer/blob/main/Code/docs/generated_docs.md)
 
 
