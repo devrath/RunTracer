@@ -1,3 +1,4 @@
+![process-analysis](https://github.com/devrath/RunTracer/assets/1456191/b0067c4c-f6f6-4c1d-a994-d378efd5b6f6)
 # Static Analysis
 
 This project leverages static analysis to ensure that the codebase meets certain standards that can be verified through automation. Two of these libraries are Detekt and Ktlint.
