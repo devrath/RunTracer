@@ -11,6 +11,8 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - footer.social
+    - header.autohide
   language: en
   palette:
     - scheme: default
@@ -25,7 +27,6 @@ theme:
         name: Switch to light mode
       primary: teal
       accent: lime
-
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -43,11 +44,25 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - abbr
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.magiclink
+  - pymdownx.caret
 
 nav:
   - Gradle Management:
       - What is a Gradle: gradle_management/what_is_gradle.md
       - Gradle Challenges: gradle_management/gradle_challenges_multi_module_project.md
 
-copyright: |
-  &copy; 2024 <a href="https://github.com/devrath"  target="_blank" rel="noopener">Devrath</a>
+footer:
+  copyright: |
+    &copy; 2024 <a href="https://github.com/devrath" target="_blank" rel="noopener">Devrath</a>
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/devrath
+    - icon: fontawesome/brands/linkdin
+      link: https://www.linkedin.com/in/devrath-ad-01b59022/
+
+extra_css:
+  - styles/custom.css
