@@ -55,6 +55,9 @@ nav:
       - What is a Gradle: gradle_management/what_is_gradle.md
       - Gradle Challenges: gradle_management/gradle_challenges_multi_module_project.md
 
+extra_css:
+  - styles/custom.css  # Optional: Path to your custom CSS file
+
 extra:
   social:
     - icon: fontawesome/brands/github
