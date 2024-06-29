@@ -4,9 +4,12 @@ package com.istudio.auth.presentation.register
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -58,32 +61,56 @@ private fun RegisterScreen(
                 style = MaterialTheme.typography.headlineMedium
             )
 
-            val annotatedString = buildAnnotatedString {
-                // Entire string has one font
-                withStyle(
-                    style = SpanStyle(
-                        fontFamily = Poppins,
-                        color = RuniqueGray
-                    )
-                ){
-                    append(stringResource(id = R.string.already_have_an_account))
-                    append(" ")
-                    // Everything following pushStringAnnotation is clickable
-                    pushStringAnnotation(
-                        tag = "clickable_text",
-                        annotation = stringResource(id = R.string.login)
-                    )
-                    withStyle(
-                        style = SpanStyle(
-                            fontWeight = FontWeight.SemiBold,
-                            color = MaterialTheme.colorScheme.primary,
-                            fontFamily = Poppins
-                        )
-                    ) {
-                        append(stringResource(id = R.string.login))
+            val annotatedTag = "clickable_text"
+            val annotatedString = annotatedHeading(annotatedTag)
+
+            ClickableText(
+                text = annotatedString,
+                onClick = { offset ->
+                    annotatedString.getStringAnnotations(
+                        tag = annotatedTag,
+                        start = offset,
+                        end = offset
+                    ).firstOrNull()?.let {
+                        onAction(RegisterAction.OnLoginClick)
                     }
                 }
-            }
+            )
+
+            Spacer(modifier = Modifier.height(48.dp))
+
+            RunTracerText(
+                text = stringResource(id = R.string.email),
+            )
+
+        }
+    }
+}
+
+@Composable
+private fun annotatedHeading(annotatedTag: String) = buildAnnotatedString {
+    // Entire string has one font
+    withStyle(
+        style = SpanStyle(
+            fontFamily = Poppins,
+            color = RuniqueGray
+        )
+    ) {
+        append(stringResource(id = R.string.already_have_an_account))
+        append(" ")
+        // Everything following pushStringAnnotation is clickable
+        pushStringAnnotation(
+            tag = annotatedTag,
+            annotation = stringResource(id = R.string.login)
+        )
+        withStyle(
+            style = SpanStyle(
+                fontWeight = FontWeight.SemiBold,
+                color = MaterialTheme.colorScheme.primary,
+                fontFamily = Poppins
+            )
+        ) {
+            append(stringResource(id = R.string.login))
         }
     }
 }
