@@ -69,6 +69,8 @@ dependencies {
     implementation(libs.timber)
     // leakcanary
     implementation(libs.leakcanary.android)
+    // Koin
+    implementation(libs.bundles.koin)
     // Testing dependencies
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

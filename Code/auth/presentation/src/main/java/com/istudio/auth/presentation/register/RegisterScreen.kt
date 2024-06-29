@@ -20,6 +20,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -41,6 +42,7 @@ import com.istudio.core.presentation.designsystem.RuniqueGray
 import com.istudio.core.presentation.designsystem.RuniqueGreen
 import com.istudio.core.presentation.designsystem.components.GradientBackground
 import com.istudio.core.presentation.designsystem.components.RunTracerActionButton
+import com.istudio.core.presentation.designsystem.components.RunTracerPasswordRequirement
 import com.istudio.core.presentation.designsystem.components.RunTracerPasswordTextField
 import com.istudio.core.presentation.designsystem.components.RunTracerText
 import com.istudio.core.presentation.designsystem.components.RunTracerTextField
@@ -49,6 +51,7 @@ import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun RegisterScreenRoot(
+    modifier: Modifier,
     onSignInClick: () -> Unit,
     onSuccessfulRegistration: () -> Unit,
     viewModel: RegisterViewModel = koinViewModel()
@@ -74,6 +77,7 @@ private fun RegisterScreen(
                 .padding(top = 16.dp)
         ) {
             RunTracerText(
+                color = MaterialTheme.colorScheme.primary,
                 text = stringResource(id = R.string.create_account),
                 style = MaterialTheme.typography.headlineMedium
             )
@@ -122,7 +126,7 @@ private fun RegisterScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            PasswordRequirement(
+            RunTracerPasswordRequirement(
                 text = stringResource(
                     id = R.string.at_least_x_characters,
                     UserDataValidator.MIN_PASSWORD_LENGTH
@@ -130,21 +134,21 @@ private fun RegisterScreen(
                 isValid = state.passwordValidationState.hasMinLength
             )
             Spacer(modifier = Modifier.height(4.dp))
-            PasswordRequirement(
+            RunTracerPasswordRequirement(
                 text = stringResource(
                     id = R.string.at_least_one_number,
                 ),
                 isValid = state.passwordValidationState.hasNumber
             )
             Spacer(modifier = Modifier.height(4.dp))
-            PasswordRequirement(
+            RunTracerPasswordRequirement(
                 text = stringResource(
                     id = R.string.contains_lowercase_char,
                 ),
                 isValid = state.passwordValidationState.hasLowerCaseCharacter
             )
             Spacer(modifier = Modifier.height(4.dp))
-            PasswordRequirement(
+            RunTracerPasswordRequirement(
                 text = stringResource(
                     id = R.string.contains_uppercase_char,
                 ),
@@ -190,34 +194,6 @@ private fun annotatedHeading(annotatedTag: String) = buildAnnotatedString {
         ) {
             append(stringResource(id = R.string.login))
         }
-    }
-}
-
-@Composable
-fun PasswordRequirement(
-    text: String,
-    isValid: Boolean,
-    modifier: Modifier = Modifier
-) {
-    Row(
-        modifier = modifier,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Icon(
-            imageVector = if (isValid) {
-                CheckIcon
-            } else {
-                CrossIcon
-            },
-            contentDescription = null,
-            tint = if(isValid) RuniqueGreen else RuniqueDarkRed
-        )
-        Spacer(modifier = Modifier.width(16.dp))
-        Text(
-            text = text,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            fontSize = 14.sp
-        )
     }
 }
 

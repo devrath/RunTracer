@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.istudio.auth.presentation.intro.IntroScreenRoot
+import com.istudio.auth.presentation.register.RegisterScreenRoot
 import com.istudio.core.presentation.designsystem.RunTracerTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,12 +22,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             RunTracerTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    IntroScreenRoot(
+                    RegisterScreenRoot(
                         modifier = Modifier.padding(innerPadding),
                         onSignInClick = {
 
                         },
-                        onSignUpClick = {
+                        onSuccessfulRegistration = {
 
                         }
                     )
@@ -38,13 +39,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun CurrentScreen(modifier: Modifier = Modifier) {
-    IntroScreenRoot(
-        onSignInClick = {
-
-        },
-        onSignUpClick = {
-
-        }
+    RegisterScreenRoot(
+        modifier = modifier,
+        onSignInClick = {},
+        onSuccessfulRegistration = {}
     )
 }
 

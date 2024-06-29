@@ -156,7 +156,7 @@ fun RunTracerPasswordTextField(
 
 @WindowSizeClassPreviews
 @Composable
-private fun RuniqueTextFieldPreview() {
+private fun RunTracerTextFieldPreview() {
     RunTracerTheme {
         RunTracerPasswordTextField(
             state = rememberTextFieldState(),

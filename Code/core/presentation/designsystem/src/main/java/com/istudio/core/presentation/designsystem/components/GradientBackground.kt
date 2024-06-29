@@ -24,53 +24,11 @@ fun GradientBackground(
     hasToolbar: Boolean = true,
     content: @Composable ColumnScope.() -> Unit
 ) {
-    val configuration = LocalConfiguration.current
-    val density = LocalDensity.current
-
-    val screenWidthPx = with(density) {
-        configuration.screenWidthDp.dp.roundToPx()
-    }
-
-    val smallDimension = minOf(
-        configuration.screenWidthDp.dp,
-        configuration.screenHeightDp.dp
-    )
-    val smallDimensionPx = with(density) {
-        smallDimension.roundToPx()
-    }
-
-    val primaryColor = MaterialTheme.colorScheme.primary
-    val isAtLeastAndroid12 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
-
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
+            .background(MaterialTheme.colorScheme.secondaryContainer)
     ) {
-        Box(
-            modifier = modifier
-                .fillMaxSize()
-                .then(
-                    if (isAtLeastAndroid12) {
-                        Modifier.blur(smallDimension / GRADIENT_BLUR_VALUE)
-                    } else {
-                        Modifier
-                    }
-                )
-                .background(
-                    brush = Brush.radialGradient(
-                        colors = listOf(
-                            if (isAtLeastAndroid12) primaryColor else primaryColor.copy(alpha = 0.3f),
-                            MaterialTheme.colorScheme.background
-                        ),
-                        center = Offset(
-                            x = screenWidthPx / 2f,
-                            y = -100f
-                        ),
-                        radius = smallDimensionPx / 2f
-                    )
-                )
-        )
         Column(
             modifier = Modifier
                 .fillMaxSize()

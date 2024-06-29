@@ -2,6 +2,13 @@ package com.istudio.runtracer
 
 import android.app.Application
 import android.util.Log
+import com.istudio.auth.presentation.di.authViewModelModule
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.androidx.workmanager.koin.workManagerFactory
+import org.koin.core.context.GlobalContext.startKoin
 import timber.log.Timber
 
 
@@ -12,10 +19,25 @@ class RunTracerApplication : Application() {
 
     }
 
+    val applicationScope = CoroutineScope(SupervisorJob())
+
+
     override fun onCreate() {
         super.onCreate()
         // Logging
         initTimber()
+        // Di
+        initKoin()
+    }
+
+    private fun initKoin() {
+        startKoin {
+            androidLogger()
+            androidContext(this@RunTracerApplication)
+            modules(
+                authViewModelModule
+            )
+        }
     }
 
     private fun initTimber() {
