@@ -41,9 +41,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
   - abbr
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -62,9 +59,5 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/devrath-ad-01b59022/
 
-footer:
-  copyright: |
-    &copy; 2024 <a href="https://github.com/devrath" target="_blank" rel="noopener">Devrath</a>
-
-extra_css:
-  - styles/custom.css
+copyright: |
+  &copy; 2024 <a href="https://github.com/devrath"  target="_blank" rel="noopener">Devrath</a>
