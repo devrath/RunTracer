@@ -55,6 +55,7 @@ nav:
       - What is a gradle: gradle_management/what_is_gradle.md
       - Gradle challenges: gradle_management/gradle_challenges_multi_module_project.md
       - Types of Dependency handlers: gradle_management/types_of_dependency_handlers.md
+      - Setting up build logic module: gradle/setting_up_build_logic_module.md
 
 extra:
   social:
