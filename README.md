@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![cover drawio](https://github.com/devrath/RunTracer/assets/1456191/a75f15d9-845e-49b9-b87e-39d98697ffd3)
+![327074383-a75f15d9-845e-49b9-b87e-39d98697ffd3](https://github.com/devrath/RunTracer/assets/1456191/9cf3be91-951e-4627-b2ea-4046f5315afc)
 
 </div>
 
