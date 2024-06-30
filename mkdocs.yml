@@ -58,7 +58,7 @@ nav:
       - Setting up build logic module: gradle_management/setting_up_build_logic_module.md
   - Documentation:
       - Dokka: documentation/dokka.md
-      - MkDocs:
+      - MkDocs: documentation/mk_docs.md
 extra:
   social:
     - icon: fontawesome/brands/github
