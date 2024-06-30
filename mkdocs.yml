@@ -51,30 +51,12 @@ markdown_extensions:
   - pymdownx.caret
 
 nav:
-  - Architecture:
-      - Separation of concerns:
-      - Advantages of multi-module:
-      - Disadvantages of multi-module:
-      - Which modularisation strategy to choose:
   - Gradle Management:
       - What is a gradle: gradle_management/what_is_gradle.md
       - Gradle challenges: gradle_management/gradle_challenges_multi_module_project.md
       - Types of Dependency handlers: gradle_management/types_of_dependency_handlers.md
       - Setting up build logic module: gradle_management/setting_up_build_logic_module.md
-  - Project Wide Utilities:
-      - Creating error handling wrapper:
-      - String resource management:
-      - Observing one time events in Compose:
-  - Foundations:
-      - Adaptability to different screen sizes:
-      - Displaying all previews of all screen sizes:
-  - Code Quality:
-      - DateKt:
-  - Performance:
-      - LeakCanary:
-  - Code Documentation:
-      - Dokka:
-      - MkDocs:
+    icon: material/code-tags
 
 extra:
   social:
