@@ -10,7 +10,10 @@ class AndroidApplicationComposeConventionPlugin: Plugin<Project> {
 
     override fun apply(target: Project) {
         target.run {
-            pluginManager.apply("runtracer.android.application")
+            pluginManager.run {
+                apply("runtracer.android.application")
+                apply("org.jetbrains.kotlin.plugin.serialization")
+            }
             val extension = extensions.getByType<ApplicationExtension>()
             configureAndroidCompose(extension)
         }
