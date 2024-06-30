@@ -56,6 +56,7 @@ nav:
       - Gradle challenges: gradle_management/gradle_challenges_multi_module_project.md
       - Types of Dependency handlers: gradle_management/types_of_dependency_handlers.md
       - Setting up build logic module: gradle_management/setting_up_build_logic_module.md
+      - Adding convention Plugin: gradle_management/adding_convention_plugins.md
   - Project Wide Utilities 🧰:
       - Creating error handling wrapper: project_wide_utilities/creating_error_handling_wrapper.md
       - String resource management: project_wide_utilities/string_resource_management.md
