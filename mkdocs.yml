@@ -56,7 +56,9 @@ nav:
       - Gradle challenges: gradle_management/gradle_challenges_multi_module_project.md
       - Types of Dependency handlers: gradle_management/types_of_dependency_handlers.md
       - Setting up build logic module: gradle_management/setting_up_build_logic_module.md
-
+  - Documentation:
+      - Dokka: documentation/dokka.md
+      - MkDocs:
 extra:
   social:
     - icon: fontawesome/brands/github
