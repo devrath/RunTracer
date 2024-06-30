@@ -56,11 +56,20 @@ nav:
       - Gradle challenges: gradle_management/gradle_challenges_multi_module_project.md
       - Types of Dependency handlers: gradle_management/types_of_dependency_handlers.md
       - Setting up build logic module: gradle_management/setting_up_build_logic_module.md
+  - Project Wide Utilities 🧰:
+      - Creating error handling wrapper: project_wide_utilities/creating_error_handling_wrapper.md
+      - String resource management: project_wide_utilities/string_resource_management.md
+      - Observing one time events in Compose: project_wide_utilities/observing_one_time_events_in_compose.md
+  - Foundations 🧱:
+      - Adaptability to different screen sizes: foundations/adaptability_to_different_screen_sizes.md
+      - Displaying all previews of all screen sizes: foundations/displaying_all_previews_of_all_screen_sizes.md
+  - Code Quality 🧪:
+      - DateKt: code_quality/date_kt.md
+  - Performance 🌡️:
+      - LeakCanary: performance/leakcanary.md
   - Documentation 📰:
       - Dokka: documentation/dokka.md
       - MkDocs: documentation/mk_docs.md
-  - Performance 🌡️:
-      - LeakCanary: performance/leakcanary.md
 
 extra:
   social:
