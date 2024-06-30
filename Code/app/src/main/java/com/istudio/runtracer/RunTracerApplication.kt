@@ -2,7 +2,9 @@ package com.istudio.runtracer
 
 import android.app.Application
 import android.util.Log
+import com.istudio.auth.data.di.authDataModule
 import com.istudio.auth.presentation.di.authViewModelModule
+import com.istudio.runtracer.di.appModule
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import org.koin.android.ext.koin.androidContext
@@ -35,7 +37,9 @@ class RunTracerApplication : Application() {
             androidLogger()
             androidContext(this@RunTracerApplication)
             modules(
-                authViewModelModule
+                authViewModelModule,
+                authDataModule,
+                appModule
             )
         }
     }

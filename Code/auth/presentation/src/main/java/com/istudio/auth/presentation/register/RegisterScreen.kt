@@ -51,7 +51,7 @@ import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun RegisterScreenRoot(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     onSignInClick: () -> Unit,
     onSuccessfulRegistration: () -> Unit,
     viewModel: RegisterViewModel = koinViewModel()

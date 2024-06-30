@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.navigation.compose)
     // Material
     implementation(libs.androidx.material3)
     implementation(libs.androidx.material.icons.extended)
@@ -71,6 +72,7 @@ dependencies {
     implementation(libs.leakcanary.android)
     // Koin
     implementation(libs.bundles.koin)
+    implementation(libs.androidx.navigation.runtime.ktx)
     // Testing dependencies
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

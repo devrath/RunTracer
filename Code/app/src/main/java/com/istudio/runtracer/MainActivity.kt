@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.istudio.auth.presentation.intro.IntroScreenRoot
 import com.istudio.auth.presentation.register.RegisterScreenRoot
 import com.istudio.core.presentation.designsystem.RunTracerTheme
@@ -22,15 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             RunTracerTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    RegisterScreenRoot(
-                        modifier = Modifier.padding(innerPadding),
-                        onSignInClick = {
-
-                        },
-                        onSuccessfulRegistration = {
-
-                        }
-                    )
+                    CurrentScreen(Modifier.padding(innerPadding))
                 }
             }
         }
@@ -39,11 +32,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun CurrentScreen(modifier: Modifier = Modifier) {
-    RegisterScreenRoot(
-        modifier = modifier,
-        onSignInClick = {},
-        onSuccessfulRegistration = {}
-    )
+    val navController = rememberNavController()
+    NavigationRoot(navController = navController)
 }
 
 @Preview(showBackground = true)
