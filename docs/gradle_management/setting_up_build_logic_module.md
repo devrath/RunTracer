@@ -11,7 +11,7 @@
 
 ## `How to differentiate between normal kotlin module and gradle specific module`
 * Say you have created a `build-logic` module in the application, Your `settings.gradle.kts` will look like this.
-```
+```gradle
 pluginManagement {
     includeBuild("build-logic") //---------------------------------> Add this line
     repositories {
