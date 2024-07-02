@@ -55,6 +55,9 @@
 * [`Dokka`](https://github.com/devrath/RunTracer/blob/main/Code/docs/generated_docs.md)
 * [`MkDocs`](https://github.com/devrath/RunTracer/wiki/Documentation:-MkDocs)
 
+# `Project specific implementations` 🛰️
+* [`Session management strategy`](https://github.com/devrath/RunTracer/wiki/Project-specific-implementations:-Session-management-strategy)
+
 
 <p align="center">
 <a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>
