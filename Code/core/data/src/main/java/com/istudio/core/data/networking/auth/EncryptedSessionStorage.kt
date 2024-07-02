@@ -8,7 +8,7 @@ import kotlinx.coroutines.withContext
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
-class EncryptedSessionStorageEncryptedSessionStorage(
+class EncryptedSessionStorage(
     private val sharedPreferences: SharedPreferences
 ): SessionStorage {
 
