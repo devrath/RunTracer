@@ -1,4 +1,4 @@
-package com.istudio.core.data.networking
+package com.istudio.core.data.networking.networking
 
 object HttpStatus {
     const val OK = 200

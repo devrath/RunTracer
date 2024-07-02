@@ -1,4 +1,4 @@
-package com.istudio.core.data.networking
+package com.istudio.core.data.networking.networking
 
 import com.istudio.core.data.BuildConfig
 import com.istudio.core.domain.util.DataError
