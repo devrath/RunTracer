@@ -56,7 +56,7 @@
 * [`MkDocs`](https://github.com/devrath/RunTracer/wiki/Documentation:-MkDocs)
 
 # `Project specific implementations` 🛰️
-* [`Setting up session storage`](https://github.com/devrath/RunTracer/wiki/Project-specific-implementations:-Setting-up-session-storage)
+* [`Session management strategy`](https://github.com/devrath/RunTracer/wiki/Project-specific-implementations:-Session-management-strategy)
 
 
 <p align="center">
