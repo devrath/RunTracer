@@ -57,6 +57,7 @@
 
 # `Project specific implementations` 🛰️
 * [`Session management strategy`](https://github.com/devrath/RunTracer/wiki/Project-specific-implementations:-Session-management-strategy)
+* [`Setting up the token refresh mechanism`](https://github.com/devrath/RunTracer/wiki/Project-specific-implementations:-Setting-up-the-token-refresh-mechanism)
 
 
 <p align="center">
