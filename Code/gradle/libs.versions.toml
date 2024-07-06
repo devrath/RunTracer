@@ -42,7 +42,7 @@ detekt = "1.23.3"
 detekt-twitter-compose = "0.0.9"
 dokka = "1.9.20"
 leakcanary = "2.14"
-screenshot = "0.0.1-alpha01"
+screenshot = "0.0.1-alpha02"
 
 # Project versions
 projectApplicationId = "com.istudio.runtracer"

@@ -32,7 +32,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.istudio.auth.presentation.R
 import com.istudio.core.presentation.designsystem.EmailIcon
-import com.istudio.core.presentation.designsystem.Poppins
 import com.istudio.core.presentation.designsystem.RunTracerTheme
 import com.istudio.core.presentation.designsystem.components.GradientBackground
 import com.istudio.core.presentation.designsystem.components.RunTracerActionButton
@@ -144,7 +143,6 @@ private fun LoginScreen(
             val annotatedString = buildAnnotatedString {
                 withStyle(
                     style = SpanStyle(
-                        fontFamily = Poppins,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 ) {
@@ -157,7 +155,6 @@ private fun LoginScreen(
                         style = SpanStyle(
                             fontWeight = FontWeight.SemiBold,
                             color = MaterialTheme.colorScheme.primary,
-                            fontFamily = Poppins
                         )
                     ) {
                         append(stringResource(id = R.string.sign_up))

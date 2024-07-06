@@ -38,7 +38,6 @@ import com.istudio.auth.presentation.R
 import com.istudio.core.presentation.designsystem.CheckIcon
 import com.istudio.core.presentation.designsystem.CrossIcon
 import com.istudio.core.presentation.designsystem.EmailIcon
-import com.istudio.core.presentation.designsystem.Poppins
 import com.istudio.core.presentation.designsystem.RunTracerTheme
 import com.istudio.core.presentation.designsystem.RuniqueDarkRed
 import com.istudio.core.presentation.designsystem.RuniqueGray
@@ -203,7 +202,6 @@ private fun annotatedHeading(annotatedTag: String) = buildAnnotatedString {
     // Entire string has one font
     withStyle(
         style = SpanStyle(
-            fontFamily = Poppins,
             color = RuniqueGray
         )
     ) {
@@ -218,7 +216,6 @@ private fun annotatedHeading(annotatedTag: String) = buildAnnotatedString {
             style = SpanStyle(
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.primary,
-                fontFamily = Poppins
             )
         ) {
             append(stringResource(id = R.string.login))

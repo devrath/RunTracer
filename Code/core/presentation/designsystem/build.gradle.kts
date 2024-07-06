@@ -20,4 +20,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     debugImplementation(libs.androidx.ui)
     debugImplementation(libs.androidx.ui.tooling)
+    // For screenshot testing
+    screenshotTestImplementation(libs.androidx.ui.tooling)
+
 }
