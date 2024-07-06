@@ -60,8 +60,9 @@
 * [`Setting up the token refresh mechanism`](https://github.com/devrath/RunTracer/wiki/Project-specific-implementations:-Setting-up-the-token-refresh-mechanism)
 
 # `Testing` 🧪
-* [`Android Native Screenshot Testing Framework for Compose`](https://github.com/devrath/RunTracer/wiki/Testing:-Android-Native-Screenshot-Testing-Framework-for-Compose)
-* [`Paparazzi Screenshot Testing Framework for Compose`](https://github.com/devrath/RunTracer/wiki/Testing:-Paparazzi-Screenshot-Testing-Framework-for-Compose)
+* `Screenshot Testing`
+  * [`Android Native Screenshot Testing Framework for Compose`](https://github.com/devrath/RunTracer/wiki/Testing:-Android-Native-Screenshot-Testing-Framework-for-Compose)
+  * [`Paparazzi Screenshot Testing Framework for Compose`](https://github.com/devrath/RunTracer/wiki/Testing:-Paparazzi-Screenshot-Testing-Framework-for-Compose)
 
 <p align="center">
 <a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>
