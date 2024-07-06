@@ -37,6 +37,7 @@ import com.istudio.core.presentation.designsystem.RunTracerTheme
 import com.istudio.core.presentation.designsystem.components.GradientBackground
 import com.istudio.core.presentation.designsystem.components.RunTracerActionButton
 import com.istudio.core.presentation.designsystem.components.RunTracerPasswordTextField
+import com.istudio.core.presentation.designsystem.components.RunTracerText
 import com.istudio.core.presentation.designsystem.components.RunTracerTextField
 import com.istudio.core.presentation.ui.ObserveAsEvents
 import org.koin.androidx.compose.koinViewModel
@@ -97,15 +98,15 @@ private fun LoginScreen(
                 .padding(vertical = 32.dp)
                 .padding(top = 16.dp)
         ) {
-            Text(
+            RunTracerText(
                 text = stringResource(id = R.string.hi_there),
                 fontWeight = FontWeight.SemiBold,
-                style = MaterialTheme.typography.headlineMedium
+                style = MaterialTheme.typography.headlineMedium,
+                color = MaterialTheme.colorScheme.onBackground,
             )
-            Text(
+            RunTracerText(
                 text = stringResource(id = R.string.runique_welcome_text),
-                fontSize = 12.sp,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+                style = MaterialTheme.typography.bodySmall
             )
 
             Spacer(modifier = Modifier.height(48.dp))
