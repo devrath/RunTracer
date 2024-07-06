@@ -1,9 +1,12 @@
 plugins {
     alias(libs.plugins.runtracer.android.library.compose)
+    alias(libs.plugins.screenshot)
 }
 
 android {
     namespace = "com.istudio.core.presentation.designsystem"
+    // Remove once screenshot api is stable
+    experimentalProperties["android.experimental.enableScreenshotTest"] = true
 }
 
 dependencies {
