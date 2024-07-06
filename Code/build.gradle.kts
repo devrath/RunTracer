@@ -13,4 +13,5 @@ plugins {
     alias(libs.plugins.mapsplatform.secrets.plugin) apply false
     alias(libs.plugins.detekt) apply false
     alias(libs.plugins.dokka) apply false
+    alias(libs.plugins.paparazzi) apply false
 }
