@@ -45,7 +45,7 @@
 * [`Adaptability to different screen sizes`](https://github.com/devrath/ComposeAlchemy/wiki/WindowSize-Class-%E2%80%90-Adaptability-to-different-screen-sizes)
 * [`Displaying all previews of all screen sizes`](https://github.com/devrath/ComposeAlchemy/wiki/Compose-building-blocks:-Displaying-all-previews-of-all-screen-sizes)
 
-# `Code Quality` 🧪
+# `Code Quality`🟰
 * [`DateKt`](https://github.com/devrath/RunTracer/wiki/Code-Quality:-Static-Code-Analysis-With-DeteKt)
 
 # `Performance` 🌡️
@@ -59,6 +59,8 @@
 * [`Session management strategy`](https://github.com/devrath/RunTracer/wiki/Project-specific-implementations:-Session-management-strategy)
 * [`Setting up the token refresh mechanism`](https://github.com/devrath/RunTracer/wiki/Project-specific-implementations:-Setting-up-the-token-refresh-mechanism)
 
+# `Testing` 🧪
+* [`Screenshot Testing Framework for Compose`](https://github.com/devrath/RunTracer/wiki/Testing:-Screenshot-Testing-Framework-for-Compose)
 
 <p align="center">
 <a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>
