@@ -21,10 +21,11 @@ import com.istudio.auth.presentation.register.RegisterScreenRoot
 @Composable
 fun NavigationRoot(
     navController: NavHostController,
+    isLoggedIn: Boolean
 ) {
     NavHost(
         navController = navController,
-        startDestination = "auth"
+        startDestination = if(isLoggedIn) "run" else "auth"
     ) {
         authGraph(navController)
         runGraph(navController)
