@@ -156,15 +156,29 @@ fun RunTracerPasswordTextField(
 
 @WindowSizeClassPreviews
 @Composable
-private fun RunTracerTextFieldPreview() {
+private fun RunTracerTextFieldPasswordNotVisiblePreview() {
     RunTracerTheme {
         RunTracerPasswordTextField(
             state = rememberTextFieldState(),
             hint = "example@test.com",
             title = "Email",
-            modifier = Modifier
-                .fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(),
             isPasswordVisible = false,
+            onTogglePasswordVisibility = {}
+        )
+    }
+}
+
+@WindowSizeClassPreviews
+@Composable
+private fun RunTracerTextFieldPasswordVisiblePreview() {
+    RunTracerTheme {
+        RunTracerPasswordTextField(
+            state = rememberTextFieldState(),
+            hint = "example@test.com",
+            title = "Email",
+            modifier = Modifier.fillMaxWidth(),
+            isPasswordVisible = true,
             onTogglePasswordVisibility = {}
         )
     }

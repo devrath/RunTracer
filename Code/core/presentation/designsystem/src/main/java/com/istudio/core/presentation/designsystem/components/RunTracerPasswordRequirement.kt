@@ -51,11 +51,22 @@ fun RunTracerPasswordRequirement(
 
 @WindowSizeClassPreviews
 @Composable
-private fun RunTracerPasswordRequirementPreview() {
+private fun RunTracerPasswordRequirementValidPreview() {
     RunTracerTheme {
         RunTracerPasswordRequirement(
             text = "Length of the password",
             isValid = true
+        )
+    }
+}
+
+@WindowSizeClassPreviews
+@Composable
+private fun RunTracerPasswordRequirementInvalidPreview() {
+    RunTracerTheme {
+        RunTracerPasswordRequirement(
+            text = "Length of the password",
+            isValid = false
         )
     }
 }

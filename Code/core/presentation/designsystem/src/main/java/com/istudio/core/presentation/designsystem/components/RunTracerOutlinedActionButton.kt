@@ -18,7 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.istudio.core.presentation.designsystem.RunTracerTheme
 import com.istudio.core.presentation.designsystem.components.UiConstants.ROUNDED_CORNER_SHAPE
+import com.istudio.core.presentation.designsystem.preview.WindowSizeClassPreviews
 
 @Composable
 fun RunTracerOutlinedActionButton(
@@ -61,5 +63,30 @@ fun RunTracerOutlinedActionButton(
                 fontWeight = FontWeight.Medium
             )
         }
+    }
+}
+
+
+@WindowSizeClassPreviews
+@Composable
+private fun RunTracerOutlinedActionButtonLoadedPreview() {
+    RunTracerTheme {
+        RunTracerOutlinedActionButton(
+            text = "Sign In",
+            isLoading = false,
+            onClick = {}
+        )
+    }
+}
+
+@WindowSizeClassPreviews
+@Composable
+private fun RunTracerOutlinedActionButtonLoadingPreview() {
+    RunTracerTheme {
+        RunTracerOutlinedActionButton(
+            text = "Sign In",
+            isLoading = true,
+            onClick = {}
+        )
     }
 }
