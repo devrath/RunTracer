@@ -1,5 +1,8 @@
-package com.istudio.auth.data
+package com.istudio.auth.data.implementations
 
+import com.istudio.auth.data.models.LoginRequest
+import com.istudio.auth.data.models.LoginResponse
+import com.istudio.auth.data.models.RegisterRequest
 import com.istudio.auth.domain.AuthRepository
 import com.istudio.core.data.networking.networking.post
 import com.istudio.core.domain.SessionStorage

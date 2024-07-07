@@ -8,9 +8,12 @@ android {
 }
 
 dependencies {
-    implementation(libs.bundles.koin)
-
+    // Modules
     implementation(projects.auth.domain)
     implementation(projects.core.domain)
     implementation(projects.core.data)
+    // Koin
+    implementation(libs.bundles.koin)
+    // Test
+    testImplementation(libs.koin.test)
 }

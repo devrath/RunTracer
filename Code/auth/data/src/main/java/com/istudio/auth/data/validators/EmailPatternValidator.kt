@@ -1,4 +1,4 @@
-package com.istudio.auth.data
+package com.istudio.auth.data.validators
 
 import android.util.Patterns
 import com.istudio.auth.domain.PatternValidator

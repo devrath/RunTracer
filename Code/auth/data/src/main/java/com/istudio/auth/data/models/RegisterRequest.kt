@@ -1,4 +1,4 @@
-package com.istudio.auth.data
+package com.istudio.auth.data.models
 
 import kotlinx.serialization.Serializable
 

@@ -1,10 +1,10 @@
 package com.istudio.auth.data.di
 
-import com.istudio.auth.data.EmailPatternValidator
+import com.istudio.auth.data.validators.EmailPatternValidator
 import com.istudio.auth.domain.AuthRepository
 import com.istudio.auth.domain.PatternValidator
 import com.istudio.auth.domain.UserDataValidator
-import com.istudio.auth.data.AuthRepositoryImpl
+import com.istudio.auth.data.implementations.AuthRepositoryImpl
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.bind
 import org.koin.dsl.module
