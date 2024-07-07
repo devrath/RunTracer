@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.runtracer.android.library.compose)
     alias(libs.plugins.screenshot)
+    alias(libs.plugins.paparazzi)
+
 }
 
 android {
