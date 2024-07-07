@@ -63,6 +63,8 @@
 * `Screenshot Testing`
   * [`Android Native Screenshot Testing Framework for Compose`](https://github.com/devrath/RunTracer/wiki/Testing:-Android-Native-Screenshot-Testing-Framework-for-Compose)
   * [`Paparazzi Screenshot Testing Framework for Compose`](https://github.com/devrath/RunTracer/wiki/Testing:-Paparazzi-Screenshot-Testing-Framework-for-Compose)
+* `End-T-End Testing`
+  * [`Using robot pattern`](https://github.com/devrath/RunTracer/wiki/Testing:-Using-robot-pattern) 
 
 <p align="center">
 <a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>
