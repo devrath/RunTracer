@@ -1,5 +1,6 @@
 package com.istudio.auth.data.models
 
+import kotlinx.serialization.json.Json
 import org.junit.Assert.*
 import org.junit.Test
 
@@ -13,8 +14,8 @@ class RegisterRequestTest {
         val registerRequest = RegisterRequest(email, password)
 
         // When
-        val json = kotlinx.serialization.json.Json.encodeToString(RegisterRequest.serializer(), registerRequest)
-        val deserializedRegisterRequest = kotlinx.serialization.json.Json.decodeFromString(RegisterRequest.serializer(), json)
+        val json = Json.encodeToString(RegisterRequest.serializer(), registerRequest)
+        val deserializedRegisterRequest = Json.decodeFromString(RegisterRequest.serializer(), json)
 
         // Then
         assertEquals(registerRequest, deserializedRegisterRequest)
