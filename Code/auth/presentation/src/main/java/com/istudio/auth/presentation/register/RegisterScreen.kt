@@ -91,7 +91,7 @@ fun RegisterScreenRoot(
 }
 
 @Composable
-private fun RegisterScreen(
+fun RegisterScreen(
     state: RegisterState,
     onAction: (RegisterAction) -> Unit
 ) {
