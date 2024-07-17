@@ -24,6 +24,12 @@ import com.istudio.core.presentation.designsystem.components.RunTracerOutlinedAc
 import com.istudio.core.presentation.designsystem.components.RunTracerText
 import com.istudio.core.presentation.designsystem.preview.WindowSizeClassPreviews
 
+/**
+ * This composable is the starting point of Intro screen
+ * @param onSignUpClick action for sign up button
+ * @param onSignInClick action for sign in button
+ * @param modifier modifier for the composable
+ */
 @Composable
 fun IntroScreenRoot(
     onSignUpClick: () -> Unit,
