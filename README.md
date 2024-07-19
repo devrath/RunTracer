@@ -45,7 +45,7 @@
 * [`Adaptability to different screen sizes`](https://github.com/devrath/ComposeAlchemy/wiki/WindowSize-Class-%E2%80%90-Adaptability-to-different-screen-sizes)
 * [`Displaying all previews of all screen sizes`](https://github.com/devrath/ComposeAlchemy/wiki/Compose-building-blocks:-Displaying-all-previews-of-all-screen-sizes)
 
-# `Code Quality`🟰
+# `Code Quality`🦺
 * [`DateKt`](https://github.com/devrath/RunTracer/wiki/Code-Quality:-Static-Code-Analysis-With-DeteKt)
 
 # `Performance` 🌡️
