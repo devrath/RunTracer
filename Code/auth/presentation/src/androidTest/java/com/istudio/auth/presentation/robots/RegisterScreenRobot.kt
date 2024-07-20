@@ -5,7 +5,9 @@ package com.istudio.auth.presentation.robots
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.ComposeContentTestRule
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performTextInput
 import androidx.test.platform.app.InstrumentationRegistry
 import com.istudio.auth.domain.PasswordValidationState
 import com.istudio.auth.presentation.R
@@ -22,7 +24,11 @@ internal class RegisterScreenRobot(private val composeRule: ComposeContentTestRu
     private val containsLowerCharacter = context.getString(R.string.contains_lowercase_char)
     private val containsUpperCharacter = context.getString(R.string.contains_uppercase_char)
     private val registerText = context.getString(R.string.register)
+    private val emailText = context.getString(R.string.email)
+    private val passwordText = context.getString(R.string.password)
 
+    val emailInput = "Test@example.com"
+    val passwordInput = "Test@123"
 
     /**
      * Loading and setting the register screen
@@ -55,5 +61,39 @@ internal class RegisterScreenRobot(private val composeRule: ComposeContentTestRu
         }
     }
 
+    /**
+     * ********************* Adding inputs *********************
+     */
+    fun inputValidEmail() {
+        composeRule.onNodeWithTag(emailText).assertExists()
+        composeRule
+            .onNodeWithTag(emailText)
+            .performTextInput(emailInput)
+    }
+
+    fun inputValidPassword() {
+        composeRule.onNodeWithTag(passwordText).assertExists()
+        composeRule
+            .onNodeWithTag(passwordText)
+            .performTextInput(passwordInput)
+    }
+    /**
+     * ********************* Adding inputs *********************
+     */
+
+
+    /**
+     * ********************* Validating inputs *********************
+     */
+    fun validateEnteredEmail() {
+        composeRule.onNodeWithText(emailInput).assertIsDisplayed()
+    }
+
+    fun validateEnteredPassword() {
+        composeRule.onNodeWithText(passwordText).assertIsDisplayed()
+    }
+    /**
+     * ********************* Validating inputs *********************
+     */
 
 }

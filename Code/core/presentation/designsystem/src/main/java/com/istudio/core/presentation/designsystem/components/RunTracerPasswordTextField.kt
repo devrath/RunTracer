@@ -35,6 +35,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
@@ -54,6 +55,7 @@ fun RunTracerPasswordTextField(
     hint: String,
     title: String?,
     modifier: Modifier = Modifier,
+    testTag: String? = null
 ) {
     var isFocused by remember {
         mutableStateOf(false)
@@ -107,7 +109,7 @@ fun RunTracerPasswordTextField(
                 .padding(horizontal = 12.dp)
                 .onFocusChanged {
                     isFocused = it.isFocused
-                },
+                }.testTag(testTag?:""),
             decorator = { innerBox ->
                 Row(
                     modifier = Modifier

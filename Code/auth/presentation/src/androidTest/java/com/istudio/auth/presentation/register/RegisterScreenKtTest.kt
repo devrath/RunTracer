@@ -14,11 +14,29 @@ class RegisterScreenKtTest {
     private val robot = RegisterScreenRobot(composeRule)
 
     @Test
-    fun tesRegisterScreen_whetherInitialUiIsLoadedProperly() {
-        // Load IntroScreen
-        robot.loadRegisterScreen()
-        // Perform assertions
-        robot.validateUiLoaded()
+    fun testRegisterScreen_whetherInitialUiIsLoadedProperly() {
+        robot.apply {
+            loadRegisterScreen()
+            validateUiLoaded()
+        }
+    }
+
+    @Test
+    fun testRegisterScreen_inputIsValidEmailEntered() {
+        robot.apply {
+            loadRegisterScreen()
+            inputValidEmail()
+            validateEnteredEmail()
+        }
+    }
+
+    @Test
+    fun testRegisterScreen_inputIsValidPasswordEntered() {
+        robot.apply {
+            loadRegisterScreen()
+            inputValidPassword()
+            validateEnteredPassword()
+        }
     }
 
 }

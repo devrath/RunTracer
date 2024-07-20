@@ -23,6 +23,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
@@ -134,9 +135,9 @@ fun RegisterScreen(
                 endIcon = if (state.isEmailValid) { CheckIcon } else null,
                 hint = stringResource(id = R.string.example_email),
                 title = stringResource(id = R.string.email),
-                modifier = Modifier.fillMaxWidth(),
                 additionalInfo = stringResource(id = R.string.must_be_a_valid_email),
-                keyboardType = KeyboardType.Email
+                keyboardType = KeyboardType.Email,
+                testTag = stringResource(id = R.string.email),
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -149,7 +150,7 @@ fun RegisterScreen(
                 },
                 hint = stringResource(id = R.string.password),
                 title = stringResource(id = R.string.password),
-                modifier = Modifier.fillMaxWidth()
+                testTag = stringResource(id = R.string.password)
             )
 
             Spacer(modifier = Modifier.height(16.dp))

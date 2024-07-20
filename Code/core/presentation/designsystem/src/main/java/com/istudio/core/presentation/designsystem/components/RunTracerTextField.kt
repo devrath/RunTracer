@@ -36,6 +36,7 @@ import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -55,7 +56,8 @@ fun RunTracerTextField(
     modifier: Modifier = Modifier,
     error: String? = null,
     keyboardType: KeyboardType = KeyboardType.Text,
-    additionalInfo: String? = null
+    additionalInfo: String? = null,
+    testTag: String? = null
 ) {
     var isFocused by remember { mutableStateOf(false) }
 
@@ -124,6 +126,7 @@ fun RunTracerTextField(
             .onFocusChanged {
                 isFocused = it.isFocused
             }
+            .testTag(testTag?:"")
 
         BasicTextField2(
             state = state,
