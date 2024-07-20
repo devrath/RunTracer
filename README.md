@@ -66,7 +66,7 @@
 * `Instrumentation Testing`
   * [`Using Koin for instrumentation tests`](https://github.com/devrath/RunTracer/wiki/Testing:-Using-Koin-for-Instrumentation-tests-in-android)
 * `Instrumentation Testing with Compose Framework`
-  * [`Robot Pattern`](https://github.com/devrath/RunTracer/wiki/Instrumentation-Testing:-Robot-Pattern)
+  * [`Robot Pattern 🤖 `](https://github.com/devrath/RunTracer/wiki/Instrumentation-Testing:-Robot-Pattern)
   * [`Testing individual composables`](https://github.com/devrath/RunTracer/wiki/Instrumentation-Testing:-Testing-individual-composables) 
 
 <p align="center">
