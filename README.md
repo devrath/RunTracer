@@ -45,7 +45,7 @@
 * [`Adaptability to different screen sizes`](https://github.com/devrath/ComposeAlchemy/wiki/WindowSize-Class-%E2%80%90-Adaptability-to-different-screen-sizes)
 * [`Displaying all previews of all screen sizes`](https://github.com/devrath/ComposeAlchemy/wiki/Compose-building-blocks:-Displaying-all-previews-of-all-screen-sizes)
 
-# `Code Quality`🟰
+# `Code Quality`🦺
 * [`DateKt`](https://github.com/devrath/RunTracer/wiki/Code-Quality:-Static-Code-Analysis-With-DeteKt)
 
 # `Performance` 🌡️
@@ -64,7 +64,10 @@
   * [`Android Native Screenshot Testing Framework for Compose`](https://github.com/devrath/RunTracer/wiki/Testing:-Android-Native-Screenshot-Testing-Framework-for-Compose)
   * [`Paparazzi Screenshot Testing Framework for Compose`](https://github.com/devrath/RunTracer/wiki/Testing:-Paparazzi-Screenshot-Testing-Framework-for-Compose)
 * `Instrumentation Testing`
-  * [`Using Koin for instrumentation tests`](https://github.com/devrath/RunTracer/wiki/Testing:-Using-Koin-for-Instrumentation-tests-in-android) 
+  * [`Using Koin for instrumentation tests`](https://github.com/devrath/RunTracer/wiki/Testing:-Using-Koin-for-Instrumentation-tests-in-android)
+* `Instrumentation Testing with Compose Framework`
+  * [`Robot Pattern 🤖 `](https://github.com/devrath/RunTracer/wiki/Instrumentation-Testing:-Robot-Pattern)
+  * [`Testing individual composables`](https://github.com/devrath/RunTracer/wiki/Instrumentation-Testing:-Testing-individual-composables) 
 
 <p align="center">
 <a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>
