@@ -39,7 +39,8 @@
 # `Project Wide Utilities` 🧰
 * [`Creating error handling wrapper`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-Creating-error-handling-wrapper)
 * [`String resource management`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-String-resource-management)
-* [`Observing one time events in Compose`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-Observing-one-time-events-in-Compose)
+* [`Observing one-time events in Compose`](https://github.com/devrath/RunTracer/wiki/Project-Wide-Utilities:-Observing-one-time-events-in-Compose)
+* [`Placing all the icon references in one single kotlin file`](https://github.com/devrath/RunTracer/wiki/Project%E2%80%90Wide%E2%80%90Utilities:%E2%80%90-Placing-all-the-icon-references-in-one-single-kotlin-file)
   
 # `Foundations` 🧱
 * [`Adaptability to different screen sizes`](https://github.com/devrath/ComposeAlchemy/wiki/WindowSize-Class-%E2%80%90-Adaptability-to-different-screen-sizes)
