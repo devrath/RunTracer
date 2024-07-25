@@ -10,6 +10,7 @@ import androidx.navigation.navigation
 import com.istudio.auth.presentation.intro.IntroScreenRoot
 import com.istudio.auth.presentation.login.LoginScreenRoot
 import com.istudio.auth.presentation.register.RegisterScreenRoot
+import com.istudio.run.presentation.run_overview.RunOverviewScreenRoot
 
 /**
  * Good practice:
@@ -104,7 +105,7 @@ private fun NavGraphBuilder.runGraph(navController: NavHostController) {
         route = "run"
     ) {
         composable("run_overview") {
-            Text(text = "Run overview!")
+            RunOverviewScreenRoot()
         }
     }
 }
