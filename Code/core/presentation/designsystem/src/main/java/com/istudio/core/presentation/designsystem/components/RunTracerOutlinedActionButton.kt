@@ -20,6 +20,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.istudio.core.presentation.designsystem.RunTracerTheme
 import com.istudio.core.presentation.designsystem.components.UiConstants.ROUNDED_CORNER_SHAPE
+import com.istudio.core.presentation.designsystem.dimen.RunTracerDimens
 import com.istudio.core.presentation.designsystem.preview.WindowSizeClassPreviews
 
 @Composable
@@ -47,12 +48,12 @@ fun RunTracerOutlinedActionButton(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(vertical = 8.dp),
+                .padding(vertical = RunTracerDimens.SpacingScale.dp8),
             contentAlignment = Alignment.Center
         ) {
             CircularProgressIndicator(
                 modifier = Modifier
-                    .size(15.dp)
+                    .size(RunTracerDimens.SpacingScale.dp15)
                     .alpha(if (isLoading) 1f else 0f),
                 strokeWidth = 1.5.dp,
                 color = MaterialTheme.colorScheme.onBackground

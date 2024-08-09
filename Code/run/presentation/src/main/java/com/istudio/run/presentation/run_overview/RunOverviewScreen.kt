@@ -20,7 +20,7 @@ import com.istudio.core.presentation.designsystem.RunIcon
 import com.istudio.core.presentation.designsystem.RunTracerTheme
 import com.istudio.core.presentation.designsystem.components.RunTracerFloatingActionButton
 import com.istudio.core.presentation.designsystem.components.RunTracerScaffold
-import com.istudio.core.presentation.designsystem.components.RuniqueToolbar
+import com.istudio.core.presentation.designsystem.components.RunTracerToolbar
 import com.istudio.core.presentation.designsystem.components.util.DropDownItem
 import com.istudio.run.presentation.R
 import org.koin.androidx.compose.koinViewModel
@@ -44,7 +44,7 @@ private fun RunOverviewScreen(
     )
     RunTracerScaffold(
         topAppBar = {
-            RuniqueToolbar(
+            RunTracerToolbar(
                 showBackButton = false,
                 title = stringResource(id = R.string.run_tracer),
                 scrollBehavior = scrollBehavior,

@@ -24,7 +24,6 @@ import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -43,7 +42,7 @@ import com.istudio.core.presentation.designsystem.RuniqueGreen
 import com.istudio.core.presentation.designsystem.components.util.DropDownItem
 
 @Composable
-fun RuniqueToolbar(
+fun RunTracerToolbar(
     showBackButton: Boolean,
     title: String,
     modifier: Modifier = Modifier,
@@ -134,7 +133,7 @@ fun RuniqueToolbar(
 @Composable
 private fun RuniqueToolbarPreview() {
     RunTracerTheme {
-        RuniqueToolbar(
+        RunTracerToolbar(
             showBackButton = false,
             title = "RunTracer",
             modifier = Modifier.fillMaxWidth(),
