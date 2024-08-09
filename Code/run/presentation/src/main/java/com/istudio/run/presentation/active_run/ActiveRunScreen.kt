@@ -3,6 +3,7 @@
 package com.istudio.run.presentation.active_run
 
 import android.Manifest
+import android.content.Context
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -20,14 +21,20 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.activity.ComponentActivity
+import androidx.activity.result.ActivityResultLauncher
+import androidx.compose.runtime.LaunchedEffect
 import com.istudio.core.presentation.designsystem.StartIcon
 import com.istudio.core.presentation.designsystem.StopIcon
+import com.istudio.core.presentation.designsystem.components.RunTracerDialog
 import com.istudio.core.presentation.designsystem.components.RunTracerFloatingActionButton
+import com.istudio.core.presentation.designsystem.components.RunTracerOutlinedActionButton
 import com.istudio.core.presentation.designsystem.components.RunTracerScaffold
 import com.istudio.core.presentation.designsystem.components.RunTracerToolbar
 import com.istudio.core.presentation.designsystem.preview.WindowSizeClassPreviews
 import com.istudio.run.presentation.R
 import com.istudio.run.presentation.active_run.components.RunDataCard
+import com.istudio.run.presentation.util.hasLocationPermission
+import com.istudio.run.presentation.util.hasNotificationPermission
 import com.istudio.run.presentation.util.shouldShowLocationPermissionRationale
 import com.istudio.run.presentation.util.shouldShowNotificationPermissionRationale
 import org.koin.androidx.compose.koinViewModel
@@ -51,6 +58,9 @@ private fun ActiveRunScreen(
     val permissionLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.RequestMultiplePermissions()
     ) { perms ->
+
+        // <!--- The block of code is triggered when the user interacts with permission---!>
+
         //  Check if the course location permission is given
         val hasCourseLocationPermission = perms[Manifest.permission.ACCESS_COARSE_LOCATION] == true
         //  Check if the fine location permission is given
@@ -66,7 +76,7 @@ private fun ActiveRunScreen(
 
         val locationPermissionState = hasCourseLocationPermission && hasFineLocationPermission
 
-        // We take the required information and submit to the view model --> The view model will decide how to deal with it
+        // We take the required information and submit to the view model --> The view model will decide how to deal with it (Keep rationale opened or not)
         onAction(
             ActiveRunAction.SubmitLocationPermissionInfo(
                 acceptedLocationPermission = locationPermissionState,
@@ -79,8 +89,31 @@ private fun ActiveRunScreen(
                 showNotificationPermissionRationale = showNotificationRationale
             )
         )
-        
     }
+
+    LaunchedEffect(key1 = true) {
+        val activity = context as ComponentActivity
+        val showLocationRationale = activity.shouldShowLocationPermissionRationale()
+        val showNotificationRationale = activity.shouldShowNotificationPermissionRationale()
+
+        onAction(
+            ActiveRunAction.SubmitLocationPermissionInfo(
+                acceptedLocationPermission = context.hasLocationPermission(),
+                showLocationRationale = showLocationRationale
+            )
+        )
+        onAction(
+            ActiveRunAction.SubmitNotificationPermissionInfo(
+                acceptedNotificationPermission = context.hasNotificationPermission(),
+                showNotificationPermissionRationale = showNotificationRationale
+            )
+        )
+
+        if(!showLocationRationale && !showNotificationRationale) {
+            permissionLauncher.requestRuniquePermissions(context)
+        }
+    }
+
 
 
     RunTracerScaffold(
@@ -123,7 +156,58 @@ private fun ActiveRunScreen(
         }
     }
 
+    if(state.showLocationRationale || state.showNotificationRationale) {
+        RunTracerDialog(
+            title = stringResource(id = R.string.permission_required),
+            onDismiss = { /* Normal dismissing not allowed for permissions */ },
+            description = when {
+                state.showLocationRationale && state.showNotificationRationale -> {
+                    stringResource(id = R.string.location_notification_rationale)
+                }
+                state.showLocationRationale -> {
+                    stringResource(id = R.string.location_rationale)
+                }
+                else -> {
+                    stringResource(id = R.string.notification_rationale)
+                }
+            },
+            primaryButton = {
+                RunTracerOutlinedActionButton(
+                    text = stringResource(id = R.string.okay),
+                    isLoading = false,
+                    onClick = {
+                        onAction(ActiveRunAction.DismissRationaleDialog)
+                        permissionLauncher.requestRuniquePermissions(context)
+                    }
+                )
+            }
+        )
+    }
 }
+
+private fun ActivityResultLauncher<Array<String>>.requestRuniquePermissions(
+    context: Context
+) {
+    val hasLocationPermission = context.hasLocationPermission()
+    val hasNotificationPermission = context.hasNotificationPermission()
+
+    val locationPermissions = arrayOf(
+        Manifest.permission.ACCESS_COARSE_LOCATION,
+        Manifest.permission.ACCESS_FINE_LOCATION,
+    )
+    val notificationPermission = if(Build.VERSION.SDK_INT >= 33) {
+        arrayOf(Manifest.permission.POST_NOTIFICATIONS)
+    } else arrayOf()
+
+    when {
+        !hasLocationPermission && !hasNotificationPermission -> {
+            launch(locationPermissions + notificationPermission)
+        }
+        !hasLocationPermission -> launch(locationPermissions)
+        !hasNotificationPermission -> launch(notificationPermission)
+    }
+}
+
 
 @Preview
 @WindowSizeClassPreviews
