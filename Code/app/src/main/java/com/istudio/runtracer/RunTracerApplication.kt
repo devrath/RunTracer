@@ -5,6 +5,7 @@ import android.util.Log
 import com.istudio.auth.data.di.authDataModule
 import com.istudio.auth.presentation.di.authViewModelModule
 import com.istudio.core.data.networking.di.coreDataModule
+import com.istudio.run.presentation.di.runViewModelModule
 import com.istudio.runtracer.di.appModule
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
@@ -41,7 +42,8 @@ class RunTracerApplication : Application() {
                 authViewModelModule,
                 authDataModule,
                 coreDataModule,
-                appModule
+                appModule,
+                runViewModelModule
             )
         }
     }

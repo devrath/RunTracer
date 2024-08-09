@@ -1,12 +1,9 @@
-package com.istudio.run.presentation.active_run.components
+package com.istudio.run.presentation.active_run
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.istudio.run.presentation.active_run.ActiveRunAction
-import com.istudio.run.presentation.active_run.ActiveRunEvent
-import com.istudio.run.presentation.active_run.ActiveRunState
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 
