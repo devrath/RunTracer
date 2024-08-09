@@ -15,5 +15,7 @@ data class ActiveRunState(
     val currentLocation: Location? = null, // We have null because, Initially we don't have the location. We get later once we start tracking
     val isRunFinished: Boolean = false,
     val isRunSaved: Boolean = false,
-    val runData: RunData = RunData()
+    val runData: RunData = RunData(),
+    val showLocationRationale: Boolean = false,
+    val showNotificationRationale: Boolean = false,
 )

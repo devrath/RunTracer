@@ -2,6 +2,10 @@
 
 package com.istudio.run.presentation.active_run
 
+import android.Manifest
+import android.os.Build
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,9 +15,11 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.activity.ComponentActivity
 import com.istudio.core.presentation.designsystem.StartIcon
 import com.istudio.core.presentation.designsystem.StopIcon
 import com.istudio.core.presentation.designsystem.components.RunTracerFloatingActionButton
@@ -22,6 +28,8 @@ import com.istudio.core.presentation.designsystem.components.RunTracerToolbar
 import com.istudio.core.presentation.designsystem.preview.WindowSizeClassPreviews
 import com.istudio.run.presentation.R
 import com.istudio.run.presentation.active_run.components.RunDataCard
+import com.istudio.run.presentation.util.shouldShowLocationPermissionRationale
+import com.istudio.run.presentation.util.shouldShowNotificationPermissionRationale
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -39,6 +47,42 @@ private fun ActiveRunScreen(
     state: ActiveRunState,
     onAction: (ActiveRunAction) -> Unit
 ) {
+    val context = LocalContext.current
+    val permissionLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestMultiplePermissions()
+    ) { perms ->
+        //  Check if the course location permission is given
+        val hasCourseLocationPermission = perms[Manifest.permission.ACCESS_COARSE_LOCATION] == true
+        //  Check if the fine location permission is given
+        val hasFineLocationPermission = perms[Manifest.permission.ACCESS_FINE_LOCATION] == true
+        // Check if the notification permission is given
+        val hasNotificationPermission = if (Build.VERSION.SDK_INT >= 33) {
+            perms[Manifest.permission.POST_NOTIFICATIONS] == true
+        } else true
+
+        val activity = context as ComponentActivity
+        val showLocationRationale = activity.shouldShowLocationPermissionRationale()
+        val showNotificationRationale = activity.shouldShowNotificationPermissionRationale()
+
+        val locationPermissionState = hasCourseLocationPermission && hasFineLocationPermission
+
+        // We take the required information and submit to the view model --> The view model will decide how to deal with it
+        onAction(
+            ActiveRunAction.SubmitLocationPermissionInfo(
+                acceptedLocationPermission = locationPermissionState,
+                showLocationRationale = showLocationRationale
+            )
+        )
+        onAction(
+            ActiveRunAction.SubmitNotificationPermissionInfo(
+                acceptedNotificationPermission = hasNotificationPermission,
+                showNotificationPermissionRationale = showNotificationRationale
+            )
+        )
+        
+    }
+
+
     RunTracerScaffold(
         withGradient = false,
         topAppBar = {
