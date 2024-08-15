@@ -23,7 +23,7 @@ import kotlinx.coroutines.flow.callbackFlow
  * Once we set this class, When ever there is a location change the callback will be triggered
  * We convert the callback to flow and give it back.
  */
-class AndroidLocationObserver(
+internal class AndroidLocationObserver(
     private val context: Context
 ) : LocationObserver {
 
